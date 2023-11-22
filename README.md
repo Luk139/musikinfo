@@ -2,6 +2,10 @@
 
 Musikinformatik Repo von Nico Friedmann und Lukas Fey
 
+## Erwünschtes Verhalten.
+Bei start des Projekts ein mal pullen, vor push eines updates, ein mal pullen.\
+Ich hab keinen bock auf merge conflicts. Ansonsten können wir auch einen test branch erstellen.
+
 ## Setup von Environment und packages
 (In anaconda prompt, oder wenn aufgesetzt in CMD)\
 conda create -n musikenv python=3.11\
@@ -16,7 +20,8 @@ pip install jupyterlab\
 pip install notebook\
 (Soundfile sollte eigentlich bei librosa dabei sein, ich mach das nur sicherheitshalber)\
 (falls ich pip installs vergessen habe, gerne hinzufügen)\
-(wenn pip install nicht funktioniert, dann pip3 install)
+(wenn pip install nicht funktioniert, dann pip3 install)\
+(andere python versionen können funktionieren, aber ich weiß nicht welche. 3.11 funktioniert bei mir, wie das environment heißt ist egal, habs halt so genannt damit ich es zuordnen kann.)
 
 ## Optionales setup von vscode für weniger arbeit
 mit strg + shift + p \
