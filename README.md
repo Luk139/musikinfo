@@ -27,4 +27,5 @@ und da dein environment auswählen.\
 Dann musst du das nicht immer manuell starten
 
 
-
+## Temporäre files
+Falls temporäre files durch ausführen des codes generiert werden, diese files bitte ins gitignore packen. Die erstellten dateien existieren nur zum lokalen testen und sind nicht teil des Projekts.
