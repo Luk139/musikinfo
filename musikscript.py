@@ -1,6 +1,11 @@
 if __name__ == '__main__':
     import librosa
     import soundfile as sf
+    import numpy as np
+    import datetime
+    import librosa.display
+    import matplotlib.pyplot as plt
+    import IPython
     #Replace 'input_audio_file' with your input audio file path
     input_audio_file = 'guitardrums.wav'
 
