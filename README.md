@@ -8,7 +8,8 @@ conda create -n musikenv python=3.11\
 conda activate musikenv\
 pip install librosa\
 pip install soundfile\
-(Soundfile sollte eigentlich bei librosa dabei sein, ich mach das nur sicherheitshalber)
+(Soundfile sollte eigentlich bei librosa dabei sein, ich mach das nur sicherheitshalber)\
+(falls ich pip installs vergessen habe, gerne hinzufügen, sowas wie matplotlib, oder numpy, oder pygame kann sicher beim testen dazu kommen, bis jetzt werden aber nur die beiden verwendet)
 
 ## Optionales setup von vscode für weniger arbeit
 mit strg + shift + p \
