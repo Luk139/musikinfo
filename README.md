@@ -2,16 +2,6 @@
 
 Musikinformatik Repo von Nico Friedmann und Lukas Fey
 
-## Aktueller stand
-Aktuell macht advscript theoretisch das was es soll, aber schlechter als der librosa approach. Trotzdem ist das erstmal unsere basis.\
-audioanalysis macht an sich nichts zum sound trennen, das erstellt nur grafiken, mit werten die wir für othercustomextraction verwenden können. Othercustomextraction extracted den drum part nicht selbst dynamisch, sondern mit manuellen parametern.\
-Als files sollten wir immer eine file mit dem grundalgorithmus haben.\
-Eine mit algorithmus mit custom parameters\
-Ene wav\
-eine Readme\ 
-und eine gitignore.\
-alles was mehr ist, bitte in old approaches rein schieben oder in die gitignore packen.
-
 ## Erwünschtes Verhalten.
 Bei start des Projekts ein mal pullen, vor push eines updates, ein mal pullen.\
 Ich hab keinen bock auf merge conflicts. Ansonsten können wir auch einen test branch erstellen.
