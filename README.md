@@ -4,7 +4,7 @@ Musikinformatik Repo von Nico Friedmann und Lukas Fey
 
 ## Erwünschtes Verhalten.
 Bei start des Projekts ein mal pullen, vor push eines updates, ein mal pullen.\
-Ich hab keinen bock auf merge conflicts. Ansonsten können wir auch einen test branch erstellen.
+Ich hab keinen bock auf merge conflicts.
 ## File management
 Wenn du eine datei hast, die ungefähr das macht was wir wollen, nur mit einem schlechten ergebnis, nicht löschen sonder in old_approaches verschieben, dann können wir uns später nochmal angucken was funktioniert hat.
 
