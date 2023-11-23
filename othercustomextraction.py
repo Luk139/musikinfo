@@ -14,9 +14,9 @@ def percussive_extraction_with_custom_parameters(audio_path, output_filename):
     amplitude_envelope = np.mean(np.abs(librosa.stft(y)), axis=0)
     
     # Parameters based on provided information
-    threshold_min = 0.6  # Minimum amplitude threshold (considering ~0dB)
+    threshold_min = 1.2  # Minimum amplitude threshold (considering ~0dB)
     threshold_max = 2.0  # Maximum amplitude threshold (considering ~0dB)
-    start_time = 23.0  # Time (in seconds) of the first drum hit
+    start_time = 0.0  # Time (in seconds) of the first drum hit
     target_frequency_min = 64  # Lower bound of target frequency around the drum hit
     target_frequency_max = 128  # Upper bound of target frequency around the drum hit
     db_threshold = 80  # Threshold for frequency distribution in dB
@@ -42,8 +42,19 @@ def percussive_extraction_with_custom_parameters(audio_path, output_filename):
 
     print("After applying masks, new shape of percussive_mask:", percussive_mask.shape)
 
-    # Rest of the code remains the same...
-    # ...
+    # Apply the mask to the original spectrogram
+    percussive_stft = stft * percussive_mask
+
+    # Inverse STFT to obtain the percussive component
+    y_percussive = librosa.istft(percussive_stft)
+
+    # Get the current working directory as the output directory
+    output_directory = os.getcwd()
+
+    # Save the extracted percussive audio as a WAV file in the current working directory
+    output_path = os.path.join(output_directory, output_filename)
+    sf.write(output_path, y_percussive, sr)
+    print("File saved to:", output_path)
 
 # Example usage
 input_audio_path = 'guitardrums.wav'  # Replace with your audio file path
