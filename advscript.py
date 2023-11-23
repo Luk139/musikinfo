@@ -13,10 +13,10 @@ def advanced_percussive_extraction_and_save(audio_path, output_filename):
 
     # Perform median filtering along the frequency axis to emphasize percussive elements
     # Adjust the filter size according to the characteristics of the audio
-    filtered_stft = median_filter(stft, size=(1, 25))  # Example filter size
+    filtered_stft = median_filter(stft, size=(1, 5))  # Emphasize shorter transient elements
     
     # Apply thresholding to discriminate between percussive and non-percussive components
-    threshold = 0.4 * np.max(filtered_stft)  # Adjust threshold according to the audio
+    threshold = 0.1 * np.max(filtered_stft)  # Adjust threshold according to the audio
     percussive_mask = filtered_stft > threshold
 
     # Apply the mask to the original spectrogram
