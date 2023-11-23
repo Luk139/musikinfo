@@ -14,14 +14,13 @@ def separate_percussive_and_harmonic(audio_path, percussive_output, harmonic_out
     amplitude_envelope = np.mean(np.abs(librosa.stft(y)), axis=0)
     
     # Parameters for separation
-    threshold_min = 0.7  # Minimum amplitude threshold
-    threshold_max = 1.0  # Maximum amplitude threshold
+    threshold_min = 0.1  # Minimum amplitude threshold
+    threshold_max = 0.8  # Maximum amplitude threshold
     start_time = 0.0  # Time (in seconds) of the first drum hit
-    target_frequency_min = 64  # Lower bound of target frequency
-    target_frequency_max = 256  # Upper bound of target frequency
-    db_threshold = 80  # Threshold for frequency distribution in dB
+    target_frequency_min = 230  # Lower bound of target frequency
+    target_frequency_max = 950  # Upper bound of target frequency
 
-    # Create a mask to separate percussive components
+    # Create a mask to separate percussive and harmonic components
     percussive_mask = (amplitude_envelope >= threshold_min) & (amplitude_envelope <= threshold_max)
 
     # Convert time-based start_time to frame index
@@ -31,7 +30,7 @@ def separate_percussive_and_harmonic(audio_path, percussive_output, harmonic_out
     freq_bin_min = np.argmin(np.abs(librosa.fft_frequencies(sr=sr) - target_frequency_min))
     freq_bin_max = np.argmin(np.abs(librosa.fft_frequencies(sr=sr) - target_frequency_max))
 
-    # Apply masks for both amplitude and frequency for percussive extraction
+    # Apply masks for both amplitude and frequency
     if start_frame < percussive_mask.shape[0]:
         percussive_mask = np.tile(percussive_mask, (stft.shape[0], 1))
         percussive_mask[:, start_frame:] = True
@@ -64,8 +63,8 @@ def separate_percussive_and_harmonic(audio_path, percussive_output, harmonic_out
     print("Harmonic component saved to:", harmonic_output_path)
 
 # Example usage
-input_audio_path = 'onlydrums.wav'  # Replace with your audio file path
-percussive_output_filename = 'extracted_percussive.wav'
-harmonic_output_filename = 'extracted_harmonic.wav'
+input_audio_path = 'onlyguitar.wav'  # Replace with your audio file path
+percussive_output_filename = 'extracted_percussive_guitar.wav'
+harmonic_output_filename = 'extracted_harmonic_guitar.wav'
 
 separate_percussive_and_harmonic(input_audio_path, percussive_output_filename, harmonic_output_filename)
