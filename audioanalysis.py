@@ -38,5 +38,5 @@ def analyze_audio(audio_path):
     plt.show()
 
 # Example usage: Provide the path to your audio file
-input_audio_path = 'onlyguitar.wav'
+input_audio_path = 'audios\onlydrums.wav'
 analyze_audio(input_audio_path)

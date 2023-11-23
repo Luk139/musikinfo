@@ -14,12 +14,12 @@ def percussive_extraction(audio_path, output_filename):
     amplitude_envelope = np.mean(np.abs(librosa.stft(y)), axis=0)
     
     # Parameters for separation
-    threshold_min = 0.7  # Minimum amplitude threshold
-    threshold_max = 1.0  # Maximum amplitude threshold
+    threshold_min = 0.1  # Minimum amplitude threshold
+    threshold_max = 1.9  # Maximum amplitude threshold
     start_time = 0.0  # Time (in seconds) of the first drum hit
-    target_frequency_min = 64  # Lower bound of target frequency
-    target_frequency_max = 256  # Upper bound of target frequency
-    db_threshold = 80  # Threshold for frequency distribution in dB
+    target_frequency_min = 52  # Lower bound of target frequency
+    target_frequency_max = 512  # Upper bound of target frequency
+    db_threshold = 90  # Threshold for frequency distribution in dB
 
     # Create a mask to separate percussive component
     percussive_mask = (amplitude_envelope >= threshold_min) & (amplitude_envelope <= threshold_max)
