@@ -6,3 +6,4 @@ extracted_percussive_custom.wav
 extracted_harmonic.wav
 extracted_harmonic_guitar.wav
 extracted_percussive_guitar.wav
+__pycache__/
