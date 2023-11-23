@@ -5,7 +5,8 @@ Musikinformatik Repo von Nico Friedmann und Lukas Fey
 ## Erwünschtes Verhalten.
 Bei start des Projekts ein mal pullen, vor push eines updates, ein mal pullen.\
 Ich hab keinen bock auf merge conflicts. Ansonsten können wir auch einen test branch erstellen.
-
+## File management
+Wenn du eine datei hast, die ungefähr das macht was wir wollen, nur mit einem schlechten ergebnis, nicht löschen sonder in old_approaches verschieben, dann können wir uns später nochmal angucken was funktioniert hat.
 ## Setup von Environment und packages
 (In anaconda prompt, oder wenn aufgesetzt in CMD)\
 conda create -n musikenv python=3.11\
