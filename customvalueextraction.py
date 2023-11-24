@@ -14,12 +14,12 @@ def percussive_extraction(audio_path, output_filename):
     amplitude_envelope = np.mean(np.abs(librosa.stft(y)), axis=0)
     
     # Parameters for separation
-    threshold_min = 0  # Minimum amplitude threshold
-    threshold_max = 1  # Maximum amplitude threshold
+    threshold_min = 1.1  # Minimum amplitude threshold
+    threshold_max = 2  # Maximum amplitude threshold
     start_time = 00.0  # Time (in seconds) of the first drum hit
-    target_frequency_min = 18  # Lower bound of target frequency
-    target_frequency_max = 64  # Upper bound of target frequency
-    db_threshold = 80  # Threshold for frequency distribution in dB
+    target_frequency_min = 64  # Lower bound of target frequency
+    target_frequency_max = 128  # Upper bound of target frequency
+    db_threshold = 100  # Threshold for frequency distribution in dB
 
     # Create a mask to separate percussive component
     percussive_mask = (amplitude_envelope >= threshold_min) & (amplitude_envelope <= threshold_max)
@@ -60,6 +60,6 @@ def percussive_extraction(audio_path, output_filename):
 
 # Example usage
 if __name__ == "__main__":
-    input_audio_filename = 'audios\guitardrums.wav'  # Replace with your audio file name
+    input_audio_filename = 'audios\LukTrack.wav'  # Replace with your audio file name
     output_filename = 'extracted_percussive.wav'
     percussive_extraction(input_audio_filename, output_filename)

@@ -13,7 +13,7 @@ def harmonic_extraction(audio_path, output_filename):
     # Get the current working directory
     current_dir = os.getcwd()
 
-    # Define input and output paths
+    # Define input and output paths+
     input_audio_path = os.path.join(current_dir, 'audios', audio_path)
     output_directory = os.path.join(current_dir, 'extractedfiles')
     output_path_harmonic = os.path.join(output_directory, output_filename)
