@@ -5,13 +5,13 @@ Diese Projekt soll eine .wav Datei einlesen und in einen Harmonischen und eine P
 Dies wird mit hilfe eines Fourier Transform gemacht.\
 -> input.wav -> fourier transform -> Trennung der Spuren -> Inverse Fourier transform -> percussive.wav und harmonic.wav
 
-## Erwünschtes Verhalten.
+## Erwünschtes Verhalten bei Arbeit am Projekt.
 Bei start des Projekts ein mal pullen, vor push eines updates, ein mal pullen.\
 Ich hab keinen bock auf merge conflicts.
 ## File management
 Wenn du eine datei hast, die ungefähr das macht was wir wollen, nur mit einem schlechten ergebnis, nicht löschen sonder in old_approaches verschieben, dann können wir uns später nochmal angucken was funktioniert hat.
 
-## Temporäre files
+## Behandlung Temporärer files
 Falls temporäre files durch ausführen des codes generiert werden, diese files bitte ins gitignore packen. Die erstellten dateien existieren nur zum lokalen testen und sind nicht teil des Projekts.
 
 ## Setup von Environment und packages
