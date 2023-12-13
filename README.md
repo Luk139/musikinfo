@@ -1,6 +1,9 @@
 # Musikinfo
 
-Musikinformatik Repo von Nico Friedmann und Lukas Fey
+Musikinformatik Repo von Nico Friedmann und Lukas Fey.\
+Diese Projekt soll eine .wav Datei einlesen und in einen Harmonischen und eine Percussive part aufteilen.\
+Dies wird mit hilfe eines Fourier Transform gemacht.\
+-> input.wav -> fourier transform -> Trennung der Spuren -> Inverse Fourier transform -> percussive.wav und harmonic.wav
 
 ## Erwünschtes Verhalten.
 Bei start des Projekts ein mal pullen, vor push eines updates, ein mal pullen.\
