@@ -35,6 +35,6 @@ def harmonic_extraction(audio_path, output_filename):
 
 # Example usage
 if __name__ == "__main__":
-    input_audio_filename = 'audios\LukTrack.wav'  # Replace with your audio file name
+    input_audio_filename = 'audios/LukTrack.wav'  # Replace with your audio file name
     output_filename = 'extracted_harmonic_guitar.wav'
     harmonic_extraction(input_audio_filename, output_filename)
