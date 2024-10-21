@@ -1,0 +1,80 @@
+\documentclass[
+	ngerman,
+	%twoside,
+	BCOR=8mm,
+	headings=normal,
+	parskip=half,
+	headsepline,
+	automark,
+	listof=totoc,
+	bibliography=totoc,
+	%,captions=tableabove
+	%draft
+]{scrreprt}
+%
+%
+\input{packages}
+%
+\input{definitions}
+%
+\input{glsdefs}
+%
+\makeglossaries
+%
+\graphicspath{{images/}}
+%
+\addbibresource{references.bib}
+
+\nocite{*} % listet alle Quellen (auch die nicht zitierten!)
+%
+%=== für schnelleres kopilieren alle ungeänderten Dateien auskommentieren =====
+\includeonly{
+	content/Abstract,
+	content/Einleitung,
+        content/Stand,
+        content/Hauptteil,
+}
+%
+%
+%==============================================================================
+%
+\begin{document}
+%
+\pdfbookmark[0]{Titelseite}{titel}
+\input{content/Cover}
+\cleardoublepage
+\pagenumbering{Roman}
+\include{content/Abstract}
+
+\cleardoublepage
+\pdfbookmark[0]{Inhaltsverzeichnis}{toc}
+\tableofcontents
+% Tabellenverzeichnis:
+% \listoftables
+\listoffigures
+\printglossary
+\printglossary[type=\acronymtype, title={Abkürzungsverzeichnis}]
+\printglossary[type=symbols, title={Symbolverzeichnis}]
+%
+\cleardoublepage
+\KOMAoptions{open=right}
+\pagenumbering{arabic}
+\include{content/Einleitung}
+\include{content/Stand}
+\include{content/Hauptteil}
+%
+\printbibliography
+%
+\appendix
+\addchap{Anhang}
+%
+
+ - Eventuell Git-Repo verlinken
+
+%
+\KOMAoptions{open=any}
+%
+\include{content/chapDeclaration}
+%
+%
+\end{document}
