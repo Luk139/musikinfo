@@ -1,0 +1,131 @@
+\chapter{Code}
+
+In diesem Abschnitt wird der Python-Code zur Extraktion von harmonischen und perkussiven Komponenten aus Audiodateien unter Verwendung der Bibliothek \texttt{librosa} detailliert erklärt.
+
+\section{Beschreibung des Codes}
+
+Der Code beginnt mit dem Importieren der benötigten Bibliotheken, um Audio zu laden, zu verarbeiten und in neue Dateien zu schreiben:
+
+\begin{lstlisting}[language=Python, caption={Bibliotheken importieren}]
+import os
+import librosa
+import soundfile as sf
+import numpy as np
+\end{lstlisting}
+
+Hierbei ist \texttt{librosa} die zentrale Bibliothek zur Verarbeitung von Audiodaten, während \texttt{soundfile} für das Schreiben der resultierenden Audiodateien verwendet wird. 
+
+\section{Hauptfunktion: \texttt{harmonic\_extraction}}
+
+Die Hauptfunktion des Codes ist \texttt{harmonic\_extraction}, die einen Dateipfad für die Audiodatei und einen Namen für die Ausgabedatei als Parameter erhält. 
+
+\begin{lstlisting}[language=Python, caption={Die Funktion \texttt{harmonic\_extraction}}]
+def harmonic_extraction(audio_path, output_filename):
+    y, sr = librosa.load(audio_path)
+    
+    y_harmonic, y_percussive = librosa.effects.hpss(y)
+\end{lstlisting}
+
+Die Funktion beginnt mit dem Laden der Audiodatei. Die Methode \texttt{librosa.load} lädt die Datei und gibt das Audiosignal \texttt{y} und die Sampling-Rate \texttt{sr} zurück. Der nächste Schritt ist die Verwendung der Harmonic-Percussive Source Separation (HPSS) Funktion \texttt{librosa.effects.hpss(y)}, die das Audiosignal in harmonische und perkussive Komponenten zerlegt. Dies geschieht mithilfe der Fourier-Transformation.
+
+\section{Speichern der Ergebnisse}
+
+Nach der Zerlegung speichert der Code die beiden Komponenten in separaten Dateien:
+
+\begin{lstlisting}[language=Python, caption={Speichern der Komponenten}]
+    current_dir = os.getcwd()
+
+    input_audio_path = os.path.join(current_dir, 'audios', audio_path)
+    output_directory = os.path.join(current_dir, 'extractedfiles')
+    output_path_harmonic = os.path.join(output_directory, output_filename)
+    output_path_percussive = os.path.join(output_directory, 'extracted_percussive.wav')
+
+    os.makedirs(output_directory, exist_ok=True)
+
+    sf.write(output_path_harmonic, y_harmonic, sr)
+    print("Harmonic component saved to:", output_path_harmonic)
+
+    y_percussive_only = y - y_harmonic
+
+    sf.write(output_path_percussive, y_percussive_only, sr)
+    print("Percussive component saved to:", output_path_percussive)
+\end{lstlisting}
+
+Das obige Codefragment erstellt das Verzeichnis \texttt{extractedfiles} und speichert darin die harmonischen und perkussiven Komponenten als separate Dateien. Die Methode \texttt{sf.write} schreibt das Audiosignal in eine Datei, die anschließend abgespielt oder analysiert werden kann.
+
+\section{Fourier-Transformation und \texttt{librosa}}
+
+Im Hintergrund verwendet \texttt{librosa} die Fourier-Transformation zur Analyse und Trennung der Frequenzkomponenten. Die Fourier-Transformation wandelt ein Zeitsignal in seine Frequenzkomponenten um, was es \texttt{librosa} ermöglicht, harmonische und perkussive Elemente zu isolieren.
+
+Die Harmonic-Percussive Source Separation (HPSS) Methode analysiert das Spektrum des Audiosignals und trennt es basierend auf der Stabilität der Frequenzkomponenten über die Zeit: Harmonische Komponenten bleiben relativ konstant, während perkussive Komponenten abrupte Änderungen im Spektrum aufweisen.
+
+\section{Hintergrund: Fourier-Transformation und HPSS in \texttt{librosa}}
+
+Um die Funktionsweise von \texttt{librosa} bei der Verarbeitung und Trennung von Audiosignalen nachzuvollziehen, betrachten wir die verwendeten Algorithmen, insbesondere die Short-Time Fourier Transform (STFT) und die Harmonic-Percussive Source Separation (HPSS). Diese Verfahren lassen sich mithilfe von grundlegender Signalverarbeitung in Python umsetzen.
+
+\subsection{Short-Time Fourier Transform (STFT)}
+
+Die STFT teilt das Audiosignal in kurze, sich überlappende Abschnitte, um das zeitliche Verhalten der Frequenzanteile zu erfassen. Dies ergibt ein Spektrogramm, das Frequenzänderungen im Zeitverlauf darstellt. Der Code für die STFT ist wie folgt:
+
+\begin{lstlisting}[language=Python, caption={STFT-Implementierung}]
+import numpy as np
+
+def stft(y, n_fft=2048, hop_length=512, window="hann"):
+    if window == "hann":
+        win = np.hanning(n_fft)
+    num_frames = 1 + (len(y) - n_fft) // hop_length
+    stft_matrix = np.empty((n_fft // 2 + 1, num_frames), dtype=np.complex64)
+
+    for i in range(num_frames):
+        start = i * hop_length
+        frame = y[start : start + n_fft] * win
+        stft_matrix[:, i] = np.fft.rfft(frame)
+    
+    return stft_matrix
+\end{lstlisting}
+
+Dieser Code berechnet das Spektrogramm des Audiosignals, indem für jedes Segment die Fourier-Transformation mit \texttt{np.fft.rfft} durchgeführt wird. Das Hann-Fenster glättet die Segmente und reduziert abrupte Übergänge zwischen den Abschnitten.
+
+\subsection{Harmonic-Percussive Source Separation (HPSS)}
+
+Die HPSS-Technik trennt das Spektrum des Audiosignals in harmonische und perkussive Komponenten, basierend auf der Annahme, dass harmonische Frequenzen über die Zeit stabil bleiben, während perkussive Frequenzen abrupte Änderungen aufweisen. Hierfür werden Medianfilter verwendet:
+
+\begin{lstlisting}[language=Python, caption={HPSS-Implementierung}]
+from scipy.ndimage import median_filter
+
+def harmonic_percussive_separation(stft_matrix, harmonic_filter_size=31, percussive_filter_size=31):
+    harmonic_component = median_filter(np.abs(stft_matrix), size=(1, harmonic_filter_size))
+    percussive_component = median_filter(np.abs(stft_matrix), size=(percussive_filter_size, 1))
+    
+    harmonic_mask = harmonic_component > percussive_component
+    percussive_mask = percussive_component >= harmonic_component
+    
+    harmonic_stft = stft_matrix * harmonic_mask
+    percussive_stft = stft_matrix * percussive_mask
+    
+    return harmonic_stft, percussive_stft
+\end{lstlisting}
+
+Dieser Code verwendet \texttt{median\_filter}, um das Spektrum über die Zeitachse zu glätten und so harmonische und perkussive Komponenten zu trennen. Die beiden Masken trennen das Spektrum in harmonische und perkussive Anteile und erlauben eine gezielte Extraktion der einzelnen Bestandteile.
+
+\subsection{Inverse STFT (iSTFT)}
+
+Um das transformierte Spektrum wieder in ein Zeitsignal zu konvertieren, verwenden wir die inverse STFT:
+
+\begin{lstlisting}[language=Python, caption={iSTFT-Implementierung}]
+def istft(stft_matrix, hop_length=512, n_fft=2048, window="hann"):
+    if window == "hann":
+        win = np.hanning(n_fft)
+    y = np.zeros(hop_length * (stft_matrix.shape[1] - 1) + n_fft)
+    
+    for i in range(stft_matrix.shape[1]):
+        frame = np.fft.irfft(stft_matrix[:, i]) * win
+        start = i * hop_length
+        y[start : start + n_fft] += frame
+    
+    return y
+\end{lstlisting}
+
+Die Funktion \texttt{istft} führt das Frequenzspektrum zurück in die Zeitdomäne und rekonstruiert das Audiosignal durch eine inverse Fourier-Transformation mit \texttt{np.fft.irfft}. Die Überlappungsaddierung gewährleistet eine nahtlose Rücktransformation in die Zeitdomäne.
+
+Zusammenfassend lässt sich sagen, dass \texttt{librosa} mithilfe der STFT und HPSS das Audiosignal in harmonische und perkussive Anteile zerlegt und so die Frequenzkomponenten eines Signals analysieren und trennen kann.
