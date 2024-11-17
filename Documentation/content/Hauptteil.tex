@@ -51,7 +51,7 @@ Eine weitere Form der Darstellung, ist die Audiodarstellung. In diesen Darstellu
 
 \par
 
-Das macht es schwieriger unterschiedliche Audiosignale zu trennen und die ursprünglichen Noten (Töne?) wieder herzustellen. Die verbreitetste Form der Audiodarstellung ist MP3 (Quelle?). In diesem Projekt werden jedoch Wave Dateien behandelt. Die Unterschiede, sowie Vor- und Nachteile der Audiodarstellungen werden in (...?) behandelt \parencite{fundamentals_of_music_processing} (Kapitel?).
+Das macht es schwieriger unterschiedliche Audiosignale zu trennen und die ursprünglichen Töne wieder herzustellen. Die verbreitetste Form der Audiodarstellung ist MP3 (Quelle?). In diesem Projekt werden jedoch Wav(einheitlich?)-Dateien behandelt. Die Unterschiede, sowie Vor- und Nachteile der Audiodarstellungen werden in \cref{audio_representations} behandelt \parencite{fundamentals_of_music_processing}.
 
  - Musik Darstellung in Audiodateien
  - Was ist eine Note audio-/ visuell
@@ -63,7 +63,7 @@ Das macht es schwieriger unterschiedliche Audiosignale zu trennen und die urspr�
 Töne entstehen durch die Vibration eines Gegenstandes. Diese erzeugen Schallwellen. Der Luftdruck einer Schallwelle wird graphisch als eine Sinus- oder Cosinusfunktion dargestellt.
 
 %
-(Bild?)
+(Spektogramm?)
 %
 
  - Was sind Frequenzen Lautstärke etc. (Stauchung/ Streckung..., Verlauf)
@@ -94,17 +94,17 @@ Die Komprimierung von Audiodateien wird meistens verwendet, um mehr Musik auf ei
 \textbf{Sampling Rate}
 %
 
-Die Sampling Rate (/Sampling-Rate?) definiert (/beschreibt?) die Anzahl von gespeicherten Signalen pro Sekunde. Dies reduziert die benötigten gespeicherten Daten von einer durchgängigen Aufnahme auf mehrere Blöcke. Beispielsweise hat eine CD Aufnahme eine Sampling Rate von 44.100 Samples pro Sekunde (kurz: 44.1 kHz), das heißt es werden 44.100 Soundsignale pro Sekunde gespeichert, dessen Übergänge kaum wahrnehmbar sind, jedoch bereits zu einem deutlichen Reduzierung des Speicherbedarfs führen.
+Die Sampling Rate (/Sampling-Rate?) definiert die Anzahl von gespeicherten Signalen pro Sekunde. Dies reduziert die benötigten gespeicherten Daten von einer durchgängigen Aufnahme auf mehrere Blöcke. Beispielsweise hat eine CD Aufnahme eine Sampling Rate von 44.100 Samples pro Sekunde (kurz: 44.1 kHz), das heißt es werden 44.100 Soundsignale pro Sekunde gespeichert, dessen Übergänge kaum wahrnehmbar sind, jedoch bereits zu einem deutlichen Reduzierung des Speicherbedarfs führen.
 
 %
 (Bild einfügen?)
 %
 
 %
-\textbf{Quantisierungsgröße (deutscher Fachbegriff?)}
+\textbf{Quantisierungsschrittweite}
 %
 
-Die Quantisierungsgröße beschreibt die Komprimierung pro Sample. Die möglichen Werte eines Samples sind fließend (Fachbegriff für Einheiten mit unendlich Nachkommastellen?) und werden mit der Quantisierungsgröße eingegrenzt. Damit wird die Anzahl der möglichen Werte eingegrenzt und dessen Unterschied festgelegt. Beispielsweise wird bei CDs ein 16-bit coding scheme (Deutsch?) gewählt, welches 65.536 mögliche Werte festlegt.
+Die Quantisierungsschrittweite beschreibt die Auflösung, mit der jedes Sample komprimiert wird. Die möglichen Werte eines Samples sind kontinuierlich und könnten theoretisch unendlich viele Dezimalstellen haben. Durch die Quantisierungsschrittweite werden diese Werte jedoch auf eine festgelegte Anzahl möglicher diskreter Werte reduziert, wodurch der Unterschied zwischen den Werten bestimmt wird. Bei CDs wird beispielsweise eine 16-Bit-Codierung gewählt, die 65.536 mögliche Werte definiert.
 
 %
 (Bild einfügen?)
@@ -114,11 +114,12 @@ Die Quantisierungsgröße beschreibt die Komprimierung pro Sample. Die mögliche
 \subsection{Waveform Audio File Format}
 %
 
-Waveform Audio File Format (kurz: WAV) sind Dateien, die Audioaufnahmen unkomprimiert speichern \parencite{what_is_a_wav_file}. Es wird \enquote{vom englischen Wort \enquote{wave} abgeleitet, und steht in diesem Zusammenhang für Schallwelle} \parencite{wav}. Für die in diesem Projekt behandelte (Fast?) Fourier Transformation sind die Höhe der \enquote{Abtastrate fs des Messsystems} und die Quantitätsgröße (siehe Kapitel...?) bedeutsam \parencite{FFT_grundlagen}. Durch die unkomprimierte Form (ist die Abtastrate (/Quantitätsgröße?) hoch und) kann die Trennung von Tonspuren (Referenz?) durchgeführt werden.
+Das Waveform Audio File Format (kurz: WAV) speichert Audioaufnahmen unkomprimiert \parencite{what_is_a_wav_file}. Der Begriff leitet sich \enquote{vom englischen Wort \enquote{wave}} für Schallwelle ab \parencite{wav}. Für die in diesem Projekt behandelte (Schnelle) Fourier-Transformation sind insbesondere die \enquote{Abtastrate fs des Messsystems} und die Quantisierungsschrittweite (siehe Kapitel...?) entscheidend  \parencite{FFT_grundlagen}. Aufgrund der unkomprimierten Speicherung (und der damit verbundenen hohen Abtastrate und Quantisierungsschrittweite) lässt sich eine klare Trennung von Tonspuren ermöglichen (Referenz?).
 
 
 %
 \subsection{Andere Formen von Audio-Dateien}
+\label{audio_representations}
 %
 
 %
@@ -138,7 +139,11 @@ Waveform Audio File Format (kurz: WAV) sind Dateien, die Audioaufnahmen unkompri
 \section{Trennung einer Tonspur in verschiedene Instrumente}
 %
 
-Eine Aufnahme speichert aufgenommene Signal in Abhängigkeit zur Zeit. Jedes der eingehenden Signale verfügt über Schwingungen in Form von einer Amplitude. Bei einer Aufnahme vermischen sich die verschiedenen Signale zu einer Amplitude und sind schwierig zu differenzieren. Beispielsweise von Hintergrundgeräuschen oder bei der Aufnahme mehrer Musikinstrumente. Die Trennung von Instrumenten einer Tonspur wird in Forschung und Bildung behandelt (Quelle?). Die verbreitetste (Quelle?) Vorgehensweise ist die Verwendung der Fourier Transformation (Gibt es andere Vorgehensweisen?).
+Eine Aufnahme speichert das aufgenommene Signal in Abhängigkeit zur Zeit. Jedes eingehende Signal verfügt über Schwingungen in Form von einer Amplitude. Bei einer Aufnahme vermischen sich die verschiedenen Signale zu einer gemeinsamen Amplitude und sind daher schwierig voneinander zu unterscheiden, beispielsweise bei Hintergrundgeräuschen oder der gleichzeitigen Aufnahme mehrerer Musikinstrumente. Die Trennung von Instrumenten innerhalb einer Tonspur ist ein Thema, das in Forschung und Bildung intensiv behandelt wird (Quelle?). Die am häufigsten verwendete Methode ist die Fourier-Transformation (Quelle?), die es ermöglicht, ein Signal in seine Frequenzkomponenten zu zerlegen.(Gibt es andere Vorgehensweisen?).
+
+\par
+
+Neben der Fourier-Transformation werden auch andere Ansätze wie die Wavelet-Transformation, die Short-Time Fourier Transform (STFT), sowie statistische Verfahren wie die Blind Source Separation (BSS) und die Independent Component Analysis (ICA) eingesetzt. Darüber hinaus finden moderne Verfahren des maschinellen Lernens, insbesondere neuronale Netzwerke, zunehmend Anwendung in der Trennung von Audiosignalen.
 
 %
 \subsection{Fourier Transformation}
@@ -152,13 +157,13 @@ Die Fourier Transformation ist ein Algorithmus der die Darstellung einer Tondate
 \subsubsection{Entwicklung der Fourier Transformation}
 %
 
-Die Fourier-Transformation ist eine Generalisierung der Fourierreihen. Diese können (stetige?) Funktionen in mehrere Funktionenreihen aufteilen. Bereits im 18. Jahrhundert wurden Fourierreihen für einzelne Funktionen entdeckt. Im Jahr 1822 behauptete Joseph Fourier, dass Funktionenreihen für jede Funktion existieren. Erst im 20. Jahrhundert wurden Funktionenreihen für die übrigen stetigen oder stückweise stetigen Funktionen entdeckt. Durch die Vollständigkeiten der Funktionenreihe kann die Transformation auf jegliche Funktionen (welche Funktionen?) angewendet werden und wurde nach Fourier benannt.
+Die Fourier-Transformation ist eine Generalisierung (/Verallgemeinerung?) der Fourierreihen. Diese Reihen können stetige oder stückweise stetige Funktionen in eine Summe von Sinus- und Kosinusfunktionen zerlegen. Bereits im 18. Jahrhundert wurden Fourierreihen für spezifische Funktionen entdeckt. 1822 stellte Joseph Fourier die Hypothese auf, dass sich jede Funktion als Summe solcher Reihen darstellen lässt. Erst im 20. Jahrhundert wurden Fourierreihen auch für andere stetige oder stückweise stetige Funktionen formal bewiesen. Dank der Vollständigkeiten der Funktionenreihe lässt sich die Fourier-Transformation auf eine Vielzahl von Funktionen anwenden, einschließlich periodischer und nicht-periodischer Funktionen, und erhielt ihren Namen zu Ehren von Fourier.
 
 \par
 
 \subsubsection{Durchführung der Transformation}
 
-Die Fourier Transformation ist ein mathematisches (?) Vorgehen, indem die zeitliche Darstellung in eine frequentielle Darstellung transformiert wird. Die Transformation ermöglicht es jegliche Funktionen in eine Summe aus Sinus und Kosinus Wellen unterschiedlicher Frequenzen zu zerlegen.
+Die Fourier-Transformation ist ein mathematisches Verfahren, bei dem ein Signal aus dem Zeitbereich in den Frequenzbereich transformiert wird. Die Transformation ermöglicht es, beliebige periodische und stückweise stetige Funktionen als Summe von Sinus- und Kosinuswellen unterschiedlicher Frequenzen darzustellen.
 
 \par
 
@@ -185,7 +190,7 @@ Anschließend werden die Tonspuren je nach Frequenz extrahiert und der Vorgang w
  - Probleme:
     - Rechenaufwand/ Dauer
 
-In (...?) wurden die Samples und Quantisierungsgrößen behandelt, die für die Durchführbarkeit der Transformation relevant sind. Zudem können Komponenten bei der Durchführung (Synonym?) parametrisiert werden.
+In (...?) wurden die relevanten Parameter wie Samplingrate und Quantisierungsschrittweite behandelt, die für die Durchführbarkeit der Transformation entscheidend sind. Zudem können verschiedene Komponenten der Transformation konfiguriert bzw. parametrisiert werden.
 
 \par
 
@@ -193,11 +198,11 @@ In (...?) wurden die Samples und Quantisierungsgrößen behandelt, die für die 
 \textbf{Blocklänge (/engl.?)}
 %
 
-Ein Parameter für die Durchführung der Fourier-Transformation ist die Blocklänge (kurz: BL). Diese behandelt die Anzahl an Samples die bei der Fourier-Transformation betrachtet werden. 
+Ein wesentlicher Parameter für die Durchführung der Fourier-Transformation ist die Blocklänge (kurz: BL), welche die Anzahl der Samples festlegt, die in der Fourier-Transformation analysiert werden.
 
 \par
 
-Umso länger die BL, desto präziser wird die Transformation durchgeführt. Jedoch bedeutet dies auch mehr Rechenaufwand und eine längere Dauer der Transformation. Bei einigen Anwendungsszenarien führt dies zu einer Abwägung zwischen Dauer und Genauigkeit der Durchführung. Beispielsweise bei einer App zum stimmen von Instrumenten und erkennen der gespielten Töne (Quelle?).
+Umso länger die BL, desto präziser ist das Ergebnis der Transformation. Dies erhöht jedoch auch den Rechenaufwand und die Dauer der Transformation. In einigen Anwendungsszenarien erfordert dies eine Abwägung zwischen Verarbeitungsdauer und Genauigkeit, beispielsweise in einer App zum Stimmen von Musikinstrumenten oder zum Erkennen der gespielten Töne (Quelle?).
 
 \par
 
@@ -221,11 +226,7 @@ In \cref{fig:fourier}(c) ist die Übereinstimmung für die Frequenz w = 262 Hz b
 
 \par
 
-Die Frequenz 262 entspricht der Note C4. Darüberhinaus wird bei einer Frequenz von 523 (siehe \cref{fig:fourier}(d)) eine hohe Übereinstimmung erkannt. Dies entspricht ungefähr der Frequenz des zweiten Teils der Note C4 (zweiter Teil?).
-
-%
- - anschließend trennen?
-%
+Die Frequenz 262 entspricht der Note C4. Darüberhinaus wird bei einer Frequenz von 523 (siehe \cref{fig:fourier}(e)) eine hohe Übereinstimmung erkannt. Dies entspricht ungefähr der Frequenz des zweiten Teils der Note C4 (zweiter Teil?).
 
 %
 \begin{figure}
@@ -240,7 +241,7 @@ Die Frequenz 262 entspricht der Note C4. Darüberhinaus wird bei einer Frequenz 
 \textbf{Nachteile}
 %
     
-Die Fourier Transformation ermöglicht es je nach Bedarf zwischen der zeitlichen oder der sequentiellen Darstellung zu wechseln. Allerdings ist bei der Fourier Transformation der Wechsel zwischen den Darstellung notwendig und es wird entweder die zeitliche oder die frequentielle Komponente ignoriert. Bei der Anwendung der Fourier Transformation gibt es keine Darstellung die beide Komponente kombiniert.
+Die Fourier Transformation ermöglicht es je nach Bedarf zwischen der zeitlichen oder der sequentiellen Darstellung zu wechseln. Allerdings ist bei der Fourier Transformation der Wechsel zwischen den Darstellung notwendig und es wird entweder die zeitliche oder die frequentielle Komponente ignoriert. Bei der Anwendung der Fourier Transformation gibt es keine Darstellung die beide Komponenten kombiniert.
 
     - Darstellung (nie Zeit und Frequenz)
 
@@ -250,11 +251,11 @@ Die Fourier Transformation ermöglicht es je nach Bedarf zwischen der zeitlichen
 \subsection{Wavelet-Transformation}
 %
 
-Die Wavelet-Transformation ist ein Vorgehen, das eine Funktion der zeitlichen Darstellung in eine 3(-?)dimensionale Darstellung in Abhhängigkeit von Zeit und Frequenz erstellt. Dafür werden Wellenfunktionen mit der ursprünglichen Funktion auf Übereinstimmungen verglichen. Es Wellenfunktionen gibt unterschiedliche Wellenfunktionen und sie werden Wevelets genannt. Der Name ist aus dem französichen und wird in kleine Welle oder Wellchen übersetzt.
+Die Wavelet-Transformation ist ein Vorgehen, das eine Funktion der zeitlichen Darstellung in eine 3(-?)dimensionale Darstellung in Abhhängigkeit von Zeit und Frequenz transformiert. Dafür werden Wellenfunktionen mit der ursprünglichen Funktion auf Übereinstimmungen verglichen. Es gibt unterschiedliche Wellenfunktionen und sie werden Wevelets genannt. Der Name ist aus dem französichen und wird in kleine Welle oder Wellchen übersetzt.
 
 \par
 
-Im Gegensatz zu der ursprünglichen Funktion sind die Flächen der Wavelets endlich und daher der Name (finite energy). Eine weitere Bedingung für Wavelets ist, dass das Integral null ergibt. Also die Fläche über und unter der X-Achse gleichgroß ist (Admissibility condition). Jede Wavelet wird um die Parameter m und b ergänzt.
+Im Gegensatz zu der ursprünglichen Funktion sind die Flächen der Wavelets endlich und daher der Name (finite energy). Eine weitere Bedingung für Wavelets ist, dass das Integral null ergibt. Also die Fläche über und unter der X-Achse gleichgroß ist (Admissibility condition). Jedes Wavelet wird um die Parameter m und b ergänzt.
 
 %
 \begin{itemize}
