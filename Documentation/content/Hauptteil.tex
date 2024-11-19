@@ -9,13 +9,16 @@ Um ein grundlegendes Verständnis für die Analyse von Dateiformaten zu entwicke
 
 Jeder Ton wird durch eine Vibration erzeugt. Diese Vibration kann durch unterschiedliche Gegenstände erzeugt werden. Dazu zählen Becken eines Schlagzeugs, Saiten eines Basses oder die Stimmbänder (?).
 
+- falsches Kapitel (\enquote{eher Was ist ein Ton?})
+- Unterschiedliche Töne akkustisch, harmonisch und perkussiv zuordnen
+
 %
 \begin{enumerate}
     \item Was ist ein Ton
     \item Formen der Musikdarstellung
-    \item Darstellung in der Mathematik
-    \item Vorstellung Fourier Transform
-    \item Ton und Fourier als Code
+    \item (Darstellung in der Mathematik)
+    \item Vorstellung Fourier-Transformation
+    \item Alternative Methode zur Fourier-Transformation
     \item Trennung von Instrumenten im Code
     \item Vorgehen im Projekt (evtl früher)
     \item Wie kann man auf dem Stand aufbauen? (/Wie könnte es weitergehen?)
@@ -27,34 +30,11 @@ Jeder Ton wird durch eine Vibration erzeugt. Diese Vibration kann durch untersch
 \end{enumerate}
 %
 
-%
-(Bis hier muss überarbeitet werden?)
-%
-
-%
-\section{Formen der Musikdarstellungen}
-%
-
-%
-(Einleitung und Überschriften?)
-%
-
-Musik kann unterschiedlich dargestellt werden. Je nach Bedarf, wird eine andere Form der Musikdarstellung benötigt. Eine Form der visuellen Musikdarstellung sind Musiknoten. Es ist eine formale Sprache, die vorgibt wie ein Musikstück gespielt wird \parencite{sheet_music_representations}.
+Um einen Algorithmus zu implementieren, ist es hilfreich die unterschieden Musikdarstellungen kennenzulernen. Für eine effektive Fourier-Transformation gibt es Vor. Manche Voraussetzungen für eine effektive Fourier-Transformation werden nur von wenigen Musikdarstellungen erfüllt.
 
 \par
 
- - MIDI nutzt Notendarstllung
-
-\par
-
-Eine weitere Form der Darstellung, ist die Audiodarstellung. In diesen Darstellungen werden alle Informationen der Töne als Audiosignale digital gespeichert und geteilt. Dazu gehören auch das Timing, die Intensität, die Lautstärke, die Länge des Tons und vieles mehr. Es werden nicht die einzelnen Töne und Noten gespeichert, sondern die Frequenzen während der Aufnahme in Abhängigkeit zur Zeit. Die Audiodatei kann auch Nebengeräusche oder weitere Instrumente beihalten.
-
-\par
-
-Das macht es schwieriger unterschiedliche Audiosignale zu trennen und die ursprünglichen Töne wieder herzustellen. Die verbreitetste Form der Audiodarstellung ist MP3 (Quelle?). In diesem Projekt werden jedoch Wav(einheitlich?)-Dateien behandelt. Die Unterschiede, sowie Vor- und Nachteile der Audiodarstellungen werden in \cref{audio_representations} behandelt \parencite{fundamentals_of_music_processing}.
-
- - Musik Darstellung in Audiodateien
- - Was ist eine Note audio-/ visuell
+Außerdem ist es relevant ein Verständnis für die Fourier-Transformation und andere Methoden zu entwickeln, um nachzuvollziehen warum die Fourier-Transformation geeignet ist. Zudem hilft ein Verständnis bei der Implementierung des Codes.
 
 %
 \section{Was ist ein Ton?}
@@ -72,13 +52,36 @@ Töne entstehen durch die Vibration eines Gegenstandes. Diese erzeugen Schallwel
 or pure tone"
 
 %
+\section{Formen der Musikdarstellungen}
+%
+
+%
+(Einleitung und Überschriften?)
+%
+
+Musik kann unterschiedlich dargestellt werden. Je nach Bedarf, wird eine andere Form der Musikdarstellung benötigt. Eine Form der visuellen Musikdarstellung sind Musiknoten. Es ist eine formale Sprache, die vorgibt wie ein Musikstück gespielt wird \parencite{sheet_music_representations}.
+
+\par
+
+ - MIDI nutzt Notendarstllung
+
+\par
+
+Eine weitere Form der Darstellung, ist die Audiodarstellung. In diesen Darstellungen werden alle Informationen der Töne als Audiosignale digital gespeichert und geteilt. Es werden die Schallwellen eines Tons (siehe ... ) aufgenommen und digital als eine Wellenfunktion gespeichert, die an der Schallwelle orientiert ist. Dazu gehören auch das Timing, die Intensität, die Lautstärke, die Länge des Tons und vieles mehr. Es werden nicht die einzelnen Töne und Noten gespeichert, sondern die Frequenzen während der Aufnahme in Abhängigkeit zur Zeit. Die Audiodatei kann auch Nebengeräusche oder weitere Instrumente beihalten.
+
+\subsection{Einordnung in den Projektkontext}
+
+Die digitale Darstellung macht es schwieriger unterschiedliche Audiosignale zu trennen und die ursprünglichen Töne wieder herzustellen. Die verbreitetste Form der Audiodarstellung ist MP3 (Quelle?). In diesem Projekt werden jedoch Wav(einheitlich?)-Dateien behandelt. Die Unterschiede, sowie Vor- und Nachteile der Audiodarstellungen werden in \cref{audio_representations} behandelt \parencite{fundamentals_of_music_processing}.
+
+ - Was ist eine Note audio-/ visuell
+
+%
 \section{Aufbau einer Audiodatei/ Music Representation}
 %
 
 Für die Aufnahme von Audiosignalen werden analoge Signale in eine digitale Form von Schall umgewandelt. Die analoge Signaldarstellung verwendet kontinuierliche und konstante Spannungsschwankungen, die den verursachten Luftdruckschwankungen entsprechen \parencite{digital_representation}. In der digitalen Form werden die Spannungsschwankungen als Bitstreams gespeichert und je nach Audio-Format komprimiert.
 
 %
- - Noten sind ebenfalls musikalische Darstellung
  - Entstehung der Audiosignale: Analog/ Digital
  %
 
@@ -86,7 +89,7 @@ Für die Aufnahme von Audiosignalen werden analoge Signale in eine digitale Form
 \subsection{Durchführung der Komprimierung}
 %
 
-Die Komprimierung von Audiodateien wird meistens verwendet, um mehr Musik auf einem Datenträger speichern zu können \parencite{what_is_audio_compression}. Um eine Aufnahme zu komprimieren wird diese in eine Sampling Rate und eine Quantisierungsgröße reduziert.
+Die Komprimierung von Audiodateien wird meistens verwendet, um mehr Musik auf einem Datenträger speichern zu können \parencite{what_is_audio_compression}. Um eine Aufnahme zu komprimieren wird diese in eine Sampling Rate und eine Quantisierungsschrittweite reduziert.
 
 \par
 
@@ -114,7 +117,7 @@ Die Quantisierungsschrittweite beschreibt die Auflösung, mit der jedes Sample k
 \subsection{Waveform Audio File Format}
 %
 
-Das Waveform Audio File Format (kurz: WAV) speichert Audioaufnahmen unkomprimiert \parencite{what_is_a_wav_file}. Der Begriff leitet sich \enquote{vom englischen Wort \enquote{wave}} für Schallwelle ab \parencite{wav}. Für die in diesem Projekt behandelte (Schnelle) Fourier-Transformation sind insbesondere die \enquote{Abtastrate fs des Messsystems} und die Quantisierungsschrittweite (siehe Kapitel...?) entscheidend  \parencite{FFT_grundlagen}. Aufgrund der unkomprimierten Speicherung (und der damit verbundenen hohen Abtastrate und Quantisierungsschrittweite) lässt sich eine klare Trennung von Tonspuren ermöglichen (Referenz?).
+Das Waveform Audio File Format (kurz: WAV) speichert Audioaufnahmen unkomprimiert \parencite{what_is_a_wav_file}. Der Begriff leitet sich \enquote{vom englischen Wort \enquote{wave}} für Schallwelle ab \parencite{wav}. Für die in diesem Projekt behandelte (Schnelle?) Fourier-Transformation sind insbesondere die \enquote{Abtastrate fs des Messsystems} und die Quantisierungsschrittweite (siehe Kapitel...?) entscheidend  \parencite{FFT_grundlagen}. Aufgrund der unkomprimierten Speicherung (und der damit verbundenen hohen Abtastrate und Quantisierungsschrittweite) lässt sich eine klare Trennung von Tonspuren ermöglichen (Referenz?).
 
 
 %
@@ -139,25 +142,29 @@ Das Waveform Audio File Format (kurz: WAV) speichert Audioaufnahmen unkomprimier
 \section{Trennung einer Tonspur in verschiedene Instrumente}
 %
 
-Eine Aufnahme speichert das aufgenommene Signal in Abhängigkeit zur Zeit. Jedes eingehende Signal verfügt über Schwingungen in Form von einer Amplitude. Bei einer Aufnahme vermischen sich die verschiedenen Signale zu einer gemeinsamen Amplitude und sind daher schwierig voneinander zu unterscheiden, beispielsweise bei Hintergrundgeräuschen oder der gleichzeitigen Aufnahme mehrerer Musikinstrumente. Die Trennung von Instrumenten innerhalb einer Tonspur ist ein Thema, das in Forschung und Bildung intensiv behandelt wird (Quelle?). Die am häufigsten verwendete Methode ist die Fourier-Transformation (Quelle?), die es ermöglicht, ein Signal in seine Frequenzkomponenten zu zerlegen.(Gibt es andere Vorgehensweisen?).
+Eine Aufnahme speichert das aufgenommene Signal in Abhängigkeit zur Zeit. Jedes eingehende Signal verfügt über Schwingungen in Form von einer Amplitude. Bei einer Aufnahme vermischen sich die verschiedenen Signale zu einer gemeinsamen Amplitude und sind daher schwierig voneinander zu unterscheiden, beispielsweise bei Hintergrundgeräuschen oder der gleichzeitigen Aufnahme mehrerer Musikinstrumente.
+
+\par
+
+Die Trennung von Instrumenten innerhalb einer Tonspur ist ein Thema, das in Forschung und Bildung intensiv behandelt wird (Quelle?). Die am häufigsten verwendete Methode ist die Fourier-Transformation (Quelle?), die es ermöglicht, ein Signal in seine Frequenzkomponenten zu zerlegen.(Gibt es andere Vorgehensweisen?).
 
 \par
 
 Neben der Fourier-Transformation werden auch andere Ansätze wie die Wavelet-Transformation, die Short-Time Fourier Transform (STFT), sowie statistische Verfahren wie die Blind Source Separation (BSS) und die Independent Component Analysis (ICA) eingesetzt. Darüber hinaus finden moderne Verfahren des maschinellen Lernens, insbesondere neuronale Netzwerke, zunehmend Anwendung in der Trennung von Audiosignalen.
 
 %
-\subsection{Fourier Transformation}
+\subsection{Fourier-Transformation}
 %
 
-Die Fourier Transformation ist ein Algorithmus der die Darstellung einer Tondatei verändert. Ursprünglich liegt die Audiospur mit einer Kombination aus unterschiedlichen Frequenzen in Abhängigkeit zur Zeit vor. In dieser Darstellung sind die unterschiedlichen Signale schwierig zu trennen und wird von der Fourier Transformation transformiert.
+Die Fourier-Transformation ist ein Algorithmus der die Darstellung einer Tondatei verändert. Ursprünglich liegt die Audiospur mit einer Kombination aus unterschiedlichen Frequenzen in Abhängigkeit zur Zeit vor. In dieser Darstellung sind die unterschiedlichen Signale schwierig zu trennen und werden von der Fourier-Transformation transformiert.
 
 \par
 
 %
-\subsubsection{Entwicklung der Fourier Transformation}
+\subsubsection{Entwicklung der Fourier-Transformation}
 %
 
-Die Fourier-Transformation ist eine Generalisierung (/Verallgemeinerung?) der Fourierreihen. Diese Reihen können stetige oder stückweise stetige Funktionen in eine Summe von Sinus- und Kosinusfunktionen zerlegen. Bereits im 18. Jahrhundert wurden Fourierreihen für spezifische Funktionen entdeckt. 1822 stellte Joseph Fourier die Hypothese auf, dass sich jede Funktion als Summe solcher Reihen darstellen lässt. Erst im 20. Jahrhundert wurden Fourierreihen auch für andere stetige oder stückweise stetige Funktionen formal bewiesen. Dank der Vollständigkeiten der Funktionenreihe lässt sich die Fourier-Transformation auf eine Vielzahl von Funktionen anwenden, einschließlich periodischer und nicht-periodischer Funktionen, und erhielt ihren Namen zu Ehren von Fourier.
+Die Fourier-Transformation ist eine Verallgemeinerung der Fourierreihen. Diese Reihen können stetige oder stückweise stetige Funktionen in eine Summe von Sinus- und Kosinusfunktionen zerlegen. Bereits im 18. Jahrhundert wurden Fourierreihen für spezifische Funktionen entdeckt. 1822 stellte Joseph Fourier die Hypothese auf, dass sich jede Funktion als Summe solcher Reihen darstellen lässt. Erst im 20. Jahrhundert wurden Fourierreihen auch für andere stetige oder stückweise stetige Funktionen formal bewiesen. Dank der Vollständigkeiten der Funktionenreihe lässt sich die Fourier-Transformation auf eine Vielzahl von Funktionen anwenden, einschließlich periodischer und nicht-periodischer Funktionen, und erhielt ihren Namen zu Ehren von Fourier.
 
 \par
 
@@ -171,11 +178,11 @@ Die Fourier-Transformation ist ein mathematisches Verfahren, bei dem ein Signal 
  
 \par
 
-In der neuen Darstellung werden die Frequenzen der Funktion unabhängig von der zeitlichen Komponente wiedergegeben. Unterschiedliche Frequenzen können unterschiedlichen Signalen zugeordnet werden. Die frequentielle Darstellung gibt an welche Signale in welchen Frequenzen Teil der Funktion sind, allerdings nicht wann. Daher wird die Darstellung wieder umgeformt in die zeitliche Abhängigkeit. 
+In der neuen Darstellung werden die Frequenzen der Funktion unabhängig von der zeitlichen Komponente wiedergegeben. Unterschiedliche Frequenzen können unterschiedlichen Signalen zugeordnet werden. Die frequentielle Darstellung gibt an welche Signale in welchen Frequenzen Teil der Funktion sind, allerdings nicht wann. Daher wird die Darstellung wieder umgeformt in die zeitliche Abhängigkeit.
 
 \par
 
-Das Signal oder die Signale, die von der Tonspur getrennt werden, können in der frequentiellen Darstellung identifiziert werden. Anschließend werden diese von den übrigen Signalen getrennt und zurück in die ursprüngliche Darstellung transformiert. Damit erhält man eine neue Tondatei, die ausschließlich aus den benötigten Signalen besteht.
+Das Signal oder die Signale, die von der Tonspur getrennt werden, können in der frequentiellen Darstellung identifiziert werden. Anschließend werden diese von den übrigen Signalen getrennt und zurück in die ursprüngliche Darstellung transformiert (Inverse Fourier Transform?). Damit erhält man eine neue Tondatei, die ausschließlich aus den benötigten Signalen besteht.
 
 \par
 
@@ -241,17 +248,19 @@ Die Frequenz 262 entspricht der Note C4. Darüberhinaus wird bei einer Frequenz 
 \textbf{Nachteile}
 %
     
-Die Fourier Transformation ermöglicht es je nach Bedarf zwischen der zeitlichen oder der sequentiellen Darstellung zu wechseln. Allerdings ist bei der Fourier Transformation der Wechsel zwischen den Darstellung notwendig und es wird entweder die zeitliche oder die frequentielle Komponente ignoriert. Bei der Anwendung der Fourier Transformation gibt es keine Darstellung die beide Komponenten kombiniert.
+Die Fourier-Transformation ermöglicht es je nach Bedarf zwischen der zeitlichen oder der sequentiellen Darstellung zu wechseln. Allerdings ist bei der Fourier-Transformation der Wechsel zwischen den Darstellung notwendig und es wird entweder die zeitliche oder die frequentielle Komponente ignoriert. Bei der Anwendung der Fourier-Transformation gibt es keine Darstellung die beide Komponenten kombiniert.
 
     - Darstellung (nie Zeit und Frequenz)
 
 (Noch unklar wie unterschiedliche Instrumente vorliegen, aber analoge Instrumente sollten in Sinusfunktion vorliegen und erkennbar sein)
+(Lukas: Alle Instrumente bzw Töne der Instrumente liegen als Sinuswellen vor)
 
 %
 \subsection{Wavelet-Transformation}
+\label{wavelet-transformation}
 %
 
-Die Wavelet-Transformation ist ein Vorgehen, das eine Funktion der zeitlichen Darstellung in eine 3(-?)dimensionale Darstellung in Abhhängigkeit von Zeit und Frequenz transformiert. Dafür werden Wellenfunktionen mit der ursprünglichen Funktion auf Übereinstimmungen verglichen. Es gibt unterschiedliche Wellenfunktionen und sie werden Wevelets genannt. Der Name ist aus dem französichen und wird in kleine Welle oder Wellchen übersetzt.
+Die Wavelet-Transformation ist ein Vorgehen, das eine Funktion der zeitlichen Darstellung in eine 3(-?)dimensionale Darstellung in Abhhängigkeit von Zeit und Frequenz transformiert. Dafür werden Wellenfunktionen mit der ursprünglichen Funktion auf Übereinstimmungen verglichen. Es gibt unterschiedliche Wellenfunktionen und sie werden Wavelets genannt. Der Name ist aus dem französichen und wird in kleine Welle oder Wellchen übersetzt.
 
 \par
 
@@ -264,7 +273,7 @@ Im Gegensatz zu der ursprünglichen Funktion sind die Flächen der Wavelets endl
 \end{itemize}
 %
 
-Zudem hat die Wavelet einen realen und einen imaginären Teil. Das bedeutet, dass durch die Ergänzung der imaginären Zahl die Wavelet um eine Achse ergänzt wird und 3(-?)dimensional wird. Sowohl der reale als auch der imaginäre Teil der Wavelet werden mit der Funktionen verglichen und durch die Multiplikation (Begriff?) erhält man die Ähnlichkeit der Funktion und der Wavelet.
+Zudem hat das Wavelet einen realen und einen imaginären Teil. Das bedeutet, dass durch die Ergänzung der imaginären Zahl die Wavelet um eine Achse ergänzt wird und 3(-?)dimensional wird. Sowohl der reale als auch der imaginäre Teil der Wavelet werden mit der Funktionen verglichen und durch die Multiplikation (Begriff?) erhält man die Ähnlichkeit der Funktion und der Wavelet.
 
 \par
 

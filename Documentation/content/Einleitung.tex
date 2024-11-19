@@ -1,16 +1,20 @@
 \chapter{Einleitung}
 %
 
-Musik ist zu einem Teil des täglichen Labens vieler Menschen geworden. Durch den Konsum und den wirtschaftlichen Ertrag wird an der Produktion und Analyse von Musik geforscht (Quelle?). Ein Teil der Forschung bezieht sich auf die Trennung einer Wellenfunktion in die unterschiedlichen Funktionen der Frequenzen. Dies wird sowohl auf audiovisuelle als auch auf visuelle Funktionen angewendet. Einer der Algorithmen zur Trennung von Signalen heißt Fourier-Transformation und wird in diesem Projekt behandelt.
+Musik ist zu einem Teil des täglichen Labens vieler Menschen geworden. Durch den Konsum und den wirtschaftlichen Ertrag wird an der Produktion und Analyse von Musik geforscht (Quelle?).
 
 \par
 
-Unter anderem werden Musikinstrumente in Liedern getrennt und einzeln angehört oder wiederverwendet. In diesem Projekt werden zum Einstieg lediglich akkustische und perkussive Instrumente getrennt. Akkustische Instrumente sind Instrumente die einen Ton erzeugen indem Menschen Kraft auf sie ausüben. Allerdings zählen Instrumente die geschlagen, geschütttelt oder geschabt werden zu den perkussiven Instrumenten.
+Ein Teil der Forschung bezieht sich auf die Trennung einer Wellenfunktion (einheitlichen Fachbegriff finden und verwenden?) in die unterschiedlichen Funktionen der Frequenzen. Zuvor beinhaltet die Wellenfunktion eine oder mehrere Sinus- und Kosinusfunktionen, die eine neue Funktion bilden. Dies wird sowohl auf audiovisuelle als auch auf visuelle Funktionen angewendet. Beispielsweise kann die Funktion mehrere Instrumente beinhalten, die anhand der Funktion nicht identifizierbar sind. Einer der Algorithmen zur Trennung von Signalen heißt Fourier-Transformation und wird in diesem Projekt behandelt.
+
+\par
+
+Unter anderem werden Musikinstrumente in Liedern getrennt und einzeln angehört oder wiederverwendet. In diesem Projekt werden zum Einstieg lediglich perkussive aus akkustischen Instrumenten getrennt. Akkustische Instrumente sind Instrumente die einen Ton erzeugen indem Menschen Kraft auf sie ausüben. Perkussive Instrumente werden geschlagen, geschütttelt oder geschabt und sind eine spezielle Form der akkustischen Instrumente. Die übrigen Instrumente sind harmonisch und ebenfalls akkustische Instrumente.
 
 (https://www.metromusicmakers.com/2020/08/the-difference-between-acoustic-electric-and-digital-instruments/)
 
 %
-(Frequenzen und Wellenfunktion erklären?)
+(Frequenzen und Wellenfunktion woanders erklären?)
 %
 
 %
@@ -21,18 +25,24 @@ Es gibt unterschiedliche Kontexte, in denen die Trennung von Audiosignalen zum E
 
 \par
 
-In Zeiten von zunehmend digital produzierter Musik und Verbreitung von Informatik stellt sich die Frage, wie Musiksignale digital aufgebaut sind und wie man mit ihnen arbeiten kann. Im Kontext dieser Arbeit wird die Fourier-Transformation verwendet, um eine Tondatei in verschiedene (Gruppen von?) -> (akkustik und percussive (deutsch)) Musikinstrumente zu zerlegen. Dies kann mit weiterer Modifikation verwendet werden, um bestimmte Instrumente zum üben, zu trennen oder Hintergrundgeräusche auszublenden.
+In Zeiten von zunehmend digital produzierter Musik und Verbreitung von Informatik stellt sich die Frage, wie Musiksignale digital aufgebaut sind und wie man mit ihnen arbeiten kann. Im Kontext dieser Arbeit wird die Fourier-Transformation verwendet, um eine Tondatei in Gruppen von harmonischen und perkussiven Musikinstrumenten zu zerlegen. Dies kann mit weiterer Modifikation verwendet werden, um bestimmte Instrumente zum üben zu trennen oder Hintergrundgeräusche auszublenden.
 
 \par
 
-Außerdem werden in dem Projekt die Überprüfung der Funktionalität einer Ampel oder das stimmen von Musikinstrumenten in Echtzeit behandelt. Dies sind nur Beispiele dafür, welche Anwendungsfälle es für die Fourier Transformation gibt.
+% Außerdem werden in dem Projekt die Überprüfung der Funktionalität einer Ampel oder das stimmen von Musikinstrumenten in Echtzeit behandelt. Dies sind nur Beispiele dafür, welche Anwendungsfälle es für die Fourier Transformation gibt.
+
+(Etwas zu kurz?)
 
 %
 \section{Vorgehen}
 %
 
-Ohne jegliches Vorwissen, wie die Signale einer Musikdatei gespeichert und von einem Computer interpretiert oder getrennt werden, wird das Projekt durchgeführt. Die Erkenntnisse und notwendiges Hintergrundwissen werden dokumentiert und erklären die Logik und Zusammenhänge der Fourier-Transformation. Durch die Dokumentation wird anderen Lesern:innen ein erstes Verständnis von WAV-Dateien vermittelt auf dem im Anschluss aufgebaut werden kann.
+Ohne jegliches Vorwissen, wie die Signale einer Musikdatei gespeichert und von einem Computer interpretiert oder getrennt werden, wird das Projekt durchgeführt. Die Erkenntnisse und notwendiges Hintergrundwissen werden dokumentiert und erklären die Logik und Zusammenhänge der Fourier-Transformation. Durch die Dokumentation wird anderen Leser:innen ein erstes Verständnis von WAV-Dateien vermittelt auf dem im Anschluss aufgebaut werden kann.
 
 \par
 
-Das Projekt dokumentiert anschließend die Implementierung eines Algorithmus zur Trennung der harmonischen und perkussiven Tongruppen einer WAV-Datei mittels Fourier Transformation, sowie das schreiben auf zwei getrennte WAV-Dateien mittels Inverse Fourier Transform (siehe: \cref{Code}). Dabei wird zuvor behandelte Logik und Hintergrundwissen referenziert und in der Praxis erklärt.
+(WAV-Dateien sehr spezifisch: Den Leser:innen wird auch die Funktionalität der FFT und Code etc. vermittelt?)
+
+\par
+
+Das Projekt dokumentiert anschließend die Implementierung eines Algorithmus zur Trennung der harmonischen und perkussiven Tongruppen einer WAV-Datei mittels Fourier-Transformation, sowie das schreiben auf zwei getrennte WAV-Dateien mittels Inverse Fourier Transform (siehe: \cref{Code}). Dabei wird zuvor behandelte Logik und Hintergrundwissen referenziert und in der Praxis erklärt.
