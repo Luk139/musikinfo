@@ -5,13 +5,6 @@
 
 Um ein grundlegendes Verständnis für die Analyse von Dateiformaten zu entwickeln wird einem klaren Schema gefolgt. Mit diesem Schema wird sich an der chronologischen Reihenfolge von der Entstehung eines Tons bis zur Verarbeitung im Code orientiert.
 
-\par
-
-Jeder Ton wird durch eine Vibration erzeugt. Diese Vibration kann durch unterschiedliche Gegenstände erzeugt werden. Dazu zählen Becken eines Schlagzeugs, Saiten eines Basses oder die Stimmbänder (?).
-
-- falsches Kapitel (\enquote{eher Was ist ein Ton?})
-- Unterschiedliche Töne akkustisch, harmonisch und perkussiv zuordnen
-
 %
 \begin{enumerate}
     \item Was ist ein Ton
@@ -38,70 +31,70 @@ Außerdem ist es relevant ein Verständnis für die Fourier-Transformation und a
 
 %
 \section{Was ist ein Ton?}
+\label{sounds}
 %
 
-Töne entstehen durch die Vibration eines Gegenstandes. Diese erzeugen Schallwellen. Der Luftdruck einer Schallwelle wird graphisch als eine Sinus- oder Cosinusfunktion dargestellt.
+Töne entstehen durch die Vibration eines Gegenstandes. Diese erzeugen Schallwellen. Das Gehör kann diese Schwingungen der Luft wahrnehmen \parencite{signaltoene}. Der Luftdruck einer Schallwelle wird graphisch als eine Sinus- oder Cosinusfunktion dargestellt.
 
-%
-(Spektogramm?)
-%
+\begin{figure}[h]
+    \centering
+    \begin{tikzpicture}[domain=0:10.5]
+        \draw[very thin,color=gray] (-0.1,-1.1) grid (10,3.9);
+        \draw[->] (-0.2,0) -- (10.5,0) node[right] {$Zeit$}; \draw[->] (0,-1.2) -- (0,4.2) node[above] {$Schalldruck$};
+        % \draw[color=blue, samples=150]	plot (\x,{sin(\x r)})	node[right] {$f(x) = \sin x$};
+        \draw[color=blue, samples=150]	plot (\x,{sin(pi*\x r)})	node[right] {$\sin x$};
+    \end{tikzpicture}
+    \caption{Wellenform eines Tons}
+    \label{wav_sound}
+\end{figure}
+\par
 
- - Was sind Frequenzen Lautstärke etc. (Stauchung/ Streckung..., Verlauf)
- - Frequenz bei 4 Perioden/ Maxima in einer Sekunde -> 4Hz?
- - "The sinusoid can be considered the prototype of an acoustic realization of a musical note. Sometimes the sound resulting from a sinusoid is called a harmonic sound
-or pure tone"
+Anhand der Wellenform kann die Frequenz eines Tons abgeleitet werden. Diese wird in Hertz (kurz: hz) angegeben. Die Frequenz gibt die Anzahl an Zyklen des Tons pro Sekunde an. Wenn beispielsweise \cref{wav_sound} eine Sekunde darstellt, entspricht die Frequenz 53hz.
+
+Diese Vibration kann durch unterschiedliche Gegenstände erzeugt werden. Dazu zählen Becken eines Schlagzeugs, Saiten eines Kontrabasses oder die Stimmbänder. In diesem Projekt werden die Perkussionsinstrumente von den restlichen Instrumenten einer Wav-Datei getrennt. 
+
+\par
+
+Akkustische Instrumente erzeugen einen Ton indem Menschen Kraft auf sie ausüben. Sie benötigen keinen Strom, keine Verstärkung und keinen Computerprozessor, um einen Ton zu erzeugen und sind die ältesten Instrumente. Sie können in perkussive und harmonische Instrumente unterteilt werden. Perkussive Instrumente werden geschlagen, geschütttelt oder geschabt und sind eine spezielle Form der akkustischen Instrumente. Die übrigen akkustischen Instrumente sind harmonisch \parencite{acoustic_electric_digital_instruments}.
+
+\par
+
+Neben akkustischen existieren noch elektrische und digitale Instrumente. Sie benötigen entweder Elektrizität oder einen Computerprozessor, um wie vorgesehen zu funktionieren. Allerdings werden sie in diesem Projekt nicht behandelt.
 
 %
 \section{Formen der Musikdarstellungen}
 %
 
-%
-(Einleitung und Überschriften?)
-%
-
-Musik kann unterschiedlich dargestellt werden. Je nach Bedarf, wird eine andere Form der Musikdarstellung benötigt. Eine Form der visuellen Musikdarstellung sind Musiknoten. Es ist eine formale Sprache, die vorgibt wie ein Musikstück gespielt wird \parencite{sheet_music_representations}.
+Musik kann unterschiedlich dargestellt werden. Je nach Bedarf, wird eine andere Form der Musikdarstellung benötigt. Es werden Musiknoten, symbolische Darstellungen und Audiodarstellungen verwendet. Es ist eine formale Sprache, die vorgibt wie ein Musikstück gespielt wird \parencite{sheet_music_representations}. Bei symbolischen Darstellungen werden eindeutige Entitäten definiert, die von einem Computer übersetzt werden. Beispielsweise wird der Musical Instrument Digital Interface (kurz: MIDI) Standard verwendet, um Informationen eines gespielten Tons möglichgst detailliert zu speichern und abzurufen.
 
 \par
 
- - MIDI nutzt Notendarstllung
-
-\par
-
-Eine weitere Form der Darstellung, ist die Audiodarstellung. In diesen Darstellungen werden alle Informationen der Töne als Audiosignale digital gespeichert und geteilt. Es werden die Schallwellen eines Tons (siehe ... ) aufgenommen und digital als eine Wellenfunktion gespeichert, die an der Schallwelle orientiert ist. Dazu gehören auch das Timing, die Intensität, die Lautstärke, die Länge des Tons und vieles mehr. Es werden nicht die einzelnen Töne und Noten gespeichert, sondern die Frequenzen während der Aufnahme in Abhängigkeit zur Zeit. Die Audiodatei kann auch Nebengeräusche oder weitere Instrumente beihalten.
+Eine weitere Form der Darstellung, ist die Audiodarstellung. In diesen Darstellungen werden alle Informationen der Töne als Audiosignale digital gespeichert und geteilt. Es werden die Schallwellen eines Tons (siehe \cref{sounds}) aufgenommen und digital als eine Wellenfunktion gespeichert, die an der Schallwelle orientiert ist. Dazu gehören auch das Timing, die Intensität, die Lautstärke, die Länge des Tons und vieles mehr. Es werden nicht die einzelnen Töne und Noten gespeichert, sondern die Frequenzen während der Aufnahme in Abhängigkeit zur Zeit. Die Audiodatei kann auch Nebengeräusche oder weitere Instrumente beihalten (\cite{fundamentals_of_music_processing}, S. 1ff).
 
 \subsection{Einordnung in den Projektkontext}
 
-Die digitale Darstellung macht es schwieriger unterschiedliche Audiosignale zu trennen und die ursprünglichen Töne wieder herzustellen. Die verbreitetste Form der Audiodarstellung ist MP3 (Quelle?). In diesem Projekt werden jedoch Wav(einheitlich?)-Dateien behandelt. Die Unterschiede, sowie Vor- und Nachteile der Audiodarstellungen werden in \cref{audio_representations} behandelt \parencite{fundamentals_of_music_processing}.
-
- - Was ist eine Note audio-/ visuell
+Die digitale Darstellung macht es schwieriger unterschiedliche Audiosignale zu trennen und die ursprünglichen Töne wieder herzustellen. Die verbreitetste Form der Audiodarstellung ist MP3 \parencite{mp3_most_popular}. In diesem Projekt werden jedoch Wav(einheitlich?)-Dateien behandelt. Die Unterschiede, sowie Vor- und Nachteile der Audiodarstellungen werden in \cref{audio_representations} behandelt \parencite{fundamentals_of_music_processing}.
 
 %
 \section{Aufbau einer Audiodatei/ Music Representation}
 %
 
-Für die Aufnahme von Audiosignalen werden analoge Signale in eine digitale Form von Schall umgewandelt. Die analoge Signaldarstellung verwendet kontinuierliche und konstante Spannungsschwankungen, die den verursachten Luftdruckschwankungen entsprechen \parencite{digital_representation}. In der digitalen Form werden die Spannungsschwankungen als Bitstreams gespeichert und je nach Audio-Format komprimiert.
-
-%
- - Entstehung der Audiosignale: Analog/ Digital
- %
+Für die Aufnahme von Audiosignalen werden analoge Signale in eine digitale Form von Schall umgewandelt. Die analoge Signaldarstellung basiert auf kontinuierliche und konstante Spannungsschwankungen, die den verursachten Luftdruckschwankungen entsprechen \parencite{digital_representation}. In der digitalen Form werden die Spannungsschwankungen als Bitstreams gespeichert und je nach Audio-Format komprimiert.
 
 %
 \subsection{Durchführung der Komprimierung}
+\label{compression}
 %
 
-Die Komprimierung von Audiodateien wird meistens verwendet, um mehr Musik auf einem Datenträger speichern zu können \parencite{what_is_audio_compression}. Um eine Aufnahme zu komprimieren wird diese in eine Sampling Rate und eine Quantisierungsschrittweite reduziert.
+Die Komprimierung von Audiodateien wird meistens verwendet, um mehr Musik auf einem Datenträger speichern zu können \parencite{what_is_audio_compression}. Um eine Aufnahme zu komprimieren wird diese in eine Samplingrate (auch: Abtastrate) und eine Quantisierungsschrittweite reduziert.
 
 \par
 
 %
-\textbf{Sampling Rate}
+\textbf{Samplingrate}
 %
 
-Die Sampling Rate (/Sampling-Rate?) definiert die Anzahl von gespeicherten Signalen pro Sekunde. Dies reduziert die benötigten gespeicherten Daten von einer durchgängigen Aufnahme auf mehrere Blöcke. Beispielsweise hat eine CD Aufnahme eine Sampling Rate von 44.100 Samples pro Sekunde (kurz: 44.1 kHz), das heißt es werden 44.100 Soundsignale pro Sekunde gespeichert, dessen Übergänge kaum wahrnehmbar sind, jedoch bereits zu einem deutlichen Reduzierung des Speicherbedarfs führen.
-
-%
-(Bild einfügen?)
-%
+Die Samplingrate definiert die Anzahl von gespeicherten Signalen pro Sekunde. Dies reduziert die benötigten gespeicherten Daten von einer durchgängigen Aufnahme auf mehrere Blöcke. Beispielsweise hat eine CD Aufnahme eine Samplingrate von 44.100 Samples pro Sekunde (kurz: 44.1 kHz), das heißt es werden 44.100 Soundsignale pro Sekunde gespeichert, dessen Übergänge kaum wahrnehmbar sind, jedoch bereits zu einem deutlichen Reduzierung des Speicherbedarfs führen.
 
 %
 \textbf{Quantisierungsschrittweite}
@@ -110,14 +103,19 @@ Die Sampling Rate (/Sampling-Rate?) definiert die Anzahl von gespeicherten Signa
 Die Quantisierungsschrittweite beschreibt die Auflösung, mit der jedes Sample komprimiert wird. Die möglichen Werte eines Samples sind kontinuierlich und könnten theoretisch unendlich viele Dezimalstellen haben. Durch die Quantisierungsschrittweite werden diese Werte jedoch auf eine festgelegte Anzahl möglicher diskreter Werte reduziert, wodurch der Unterschied zwischen den Werten bestimmt wird. Bei CDs wird beispielsweise eine 16-Bit-Codierung gewählt, die 65.536 mögliche Werte definiert.
 
 %
-(Bild einfügen?)
+\begin{figure}[h]
+    \includegraphics[width=0.5\textwidth]{images/Samplingrate_Quantisierungsgröße.PNG}
+    \caption{Unterteilung in Samplingrate (oben) und Quantisierungsschrittweite (unten)}
+    \label{fig:samplingrate}
+\end{figure}
+% Music Processing S.61
 %
 
 %
 \subsection{Waveform Audio File Format}
 %
 
-Das Waveform Audio File Format (kurz: WAV) speichert Audioaufnahmen unkomprimiert \parencite{what_is_a_wav_file}. Der Begriff leitet sich \enquote{vom englischen Wort \enquote{wave}} für Schallwelle ab \parencite{wav}. Für die in diesem Projekt behandelte (Schnelle?) Fourier-Transformation sind insbesondere die \enquote{Abtastrate fs des Messsystems} und die Quantisierungsschrittweite (siehe Kapitel...?) entscheidend  \parencite{FFT_grundlagen}. Aufgrund der unkomprimierten Speicherung (und der damit verbundenen hohen Abtastrate und Quantisierungsschrittweite) lässt sich eine klare Trennung von Tonspuren ermöglichen (Referenz?).
+Das Waveform Audio File Format (kurz: WAV) speichert Audioaufnahmen unkomprimiert \parencite{what_is_a_wav_file}. Der Begriff leitet sich \enquote{vom englischen Wort \enquote{wave}} für Schallwelle ab \parencite{wav}. Für die in diesem Projekt behandelte Fourier-Transformation sind insbesondere die \enquote{Abtastrate fs des Messsystems} und die Quantisierungsschrittweite (siehe \cref{compression}) entscheidend  \parencite{FFT_grundlagen}. Aufgrund der unkomprimierten Speicherung (und der damit verbundenen hohen Abtastrate und Quantisierungsschrittweite) lässt sich eine klare Trennung von Tonspuren ermöglichen (Referenz?).
 
 
 %
@@ -142,11 +140,11 @@ Das Waveform Audio File Format (kurz: WAV) speichert Audioaufnahmen unkomprimier
 \section{Trennung einer Tonspur in verschiedene Instrumente}
 %
 
-Eine Aufnahme speichert das aufgenommene Signal in Abhängigkeit zur Zeit. Jedes eingehende Signal verfügt über Schwingungen in Form von einer Amplitude. Bei einer Aufnahme vermischen sich die verschiedenen Signale zu einer gemeinsamen Amplitude und sind daher schwierig voneinander zu unterscheiden, beispielsweise bei Hintergrundgeräuschen oder der gleichzeitigen Aufnahme mehrerer Musikinstrumente.
+Eine Aufnahme speichert das aufgenommene Signal in Abhängigkeit zur Zeit. Jedes eingehende Signal verfügt über Schwingungen in Form von einer Wellenform. Bei einer Aufnahme vermischen sich die verschiedenen Signale zu einer gemeinsamen Wellenform und sind daher schwierig voneinander zu unterscheiden, beispielsweise bei Hintergrundgeräuschen oder der gleichzeitigen Aufnahme mehrerer Musikinstrumente.
 
 \par
 
-Die Trennung von Instrumenten innerhalb einer Tonspur ist ein Thema, das in Forschung und Bildung intensiv behandelt wird (Quelle?). Die am häufigsten verwendete Methode ist die Fourier-Transformation (Quelle?), die es ermöglicht, ein Signal in seine Frequenzkomponenten zu zerlegen.(Gibt es andere Vorgehensweisen?).
+Die Trennung von Instrumenten innerhalb einer Tonspur ist ein Thema, das in Forschung und Bildung intensiv behandelt wird (Quelle?). Die am häufigsten verwendete Methode ist die Fourier-Transformation (Quelle?), die es ermöglicht, ein Signal in seine Frequenzkomponenten zu zerlegen.
 
 \par
 
@@ -174,7 +172,7 @@ Die Fourier-Transformation ist ein mathematisches Verfahren, bei dem ein Signal 
 
 \par
 
- - Vergleichsschwingungen
+%  - Vergleichsschwingungen
  
 \par
 
@@ -182,45 +180,47 @@ In der neuen Darstellung werden die Frequenzen der Funktion unabhängig von der 
 
 \par
 
-Das Signal oder die Signale, die von der Tonspur getrennt werden, können in der frequentiellen Darstellung identifiziert werden. Anschließend werden diese von den übrigen Signalen getrennt und zurück in die ursprüngliche Darstellung transformiert (Inverse Fourier Transform?). Damit erhält man eine neue Tondatei, die ausschließlich aus den benötigten Signalen besteht.
+Das Signal oder die Signale, die von der Tonspur getrennt werden, können in der frequentiellen Darstellung identifiziert werden. Anschließend werden diese von den übrigen Signalen getrennt und zurück in die ursprüngliche Darstellung transformiert (Inverse Fourier Transform). Damit erhält man eine neue Tondatei, die ausschließlich aus den benötigten Signalen besteht.
 
-\par
+% \subsubsection{Parameter der Transformation}
 
-Anschließend werden die Tonspuren je nach Frequenz extrahiert und der Vorgang wieder rückgängig gemacht. Somit liegen diese als WAV-Datei vor und können weiterverwendet werden.
+%  - Probleme:
+%     - Rechenaufwand/ Dauer
 
-%
-(Bild?)
-%
+% In \cref{compression} wurden die relevanten Parameter wie Samplingrate und Quantisierungsschrittweite behandelt, die für die Durchführbarkeit der Transformation entscheidend sind. Zudem können verschiedene Komponenten der Transformation konfiguriert bzw. parametrisiert werden.
 
-\subsubsection{Parameter der Transformation}
+% \par
 
- - Probleme:
-    - Rechenaufwand/ Dauer
+% %
+% \textbf{Blocklänge (/engl.?)}
+% %
 
-In (...?) wurden die relevanten Parameter wie Samplingrate und Quantisierungsschrittweite behandelt, die für die Durchführbarkeit der Transformation entscheidend sind. Zudem können verschiedene Komponenten der Transformation konfiguriert bzw. parametrisiert werden.
+% Ein wesentlicher Parameter für die Durchführung der Fourier-Transformation ist die Blocklänge (kurz: BL), welche die Anzahl der Samples festlegt, die in der Fourier-Transformation analysiert werden.
 
-\par
+% \par
 
-%
-\textbf{Blocklänge (/engl.?)}
-%
-
-Ein wesentlicher Parameter für die Durchführung der Fourier-Transformation ist die Blocklänge (kurz: BL), welche die Anzahl der Samples festlegt, die in der Fourier-Transformation analysiert werden.
-
-\par
-
-Umso länger die BL, desto präziser ist das Ergebnis der Transformation. Dies erhöht jedoch auch den Rechenaufwand und die Dauer der Transformation. In einigen Anwendungsszenarien erfordert dies eine Abwägung zwischen Verarbeitungsdauer und Genauigkeit, beispielsweise in einer App zum Stimmen von Musikinstrumenten oder zum Erkennen der gespielten Töne (Quelle?).
+% Umso länger die BL, desto präziser ist das Ergebnis der Transformation. Dies erhöht jedoch auch den Rechenaufwand und die Dauer der Transformation. In einigen Anwendungsszenarien erfordert dies eine Abwägung zwischen Verarbeitungsdauer und Genauigkeit, beispielsweise in einer App zum Stimmen von Musikinstrumenten oder zum Erkennen der gespielten Töne (Quelle?).
 
 \par
 
 \subsubsection{Durchführung am Beispiel einer Musiknote}
 
-In diesem Beispiel (Müller referenzieren?) wird eine Note auf einem Piano gespielt und durch die Transformation in eine frequentielle Darstellung der gespielte Ton erkannt.
+In diesem Beispiel (aus \cite{fundamentals_of_music_processing}, S.40f) wird eine Note auf einem Piano gespielt und durch die Transformation in eine frequentielle Darstellung der gespielte Ton erkannt.
 
 \par
 
-Die Aufnahme des Tons ist in \cref{fig:fourier}(a) zu erkennen. Für die Transformation wird ein Ausschnitt von 10ms verwendet. Das entspricht der Blocklänge und reduziert den Rechenaufwand (referenzieren?).
+% Die Aufnahme des Tons ist in \cref{fig:fourier}(a) zu erkennen. Für die Transformation wird ein Ausschnitt von 10ms verwendet. Das entspricht der Blocklänge und reduziert den Rechenaufwand (referenzieren?).
 
+Die Aufnahme des Tons ist in \cref{fig:fourier}(a) zu erkennen. Für die Transformation wird ein Ausschnitt von 10ms verwendet, um den Rechenaufwand zu reduzieren.
+
+%
+\begin{figure}[h]
+    \includegraphics[width=1\textwidth]{images/Fourier_math.PNG}
+    \caption{Note C4 in unterschiedlichen Darstellungen (\cite{fundamentals_of_music_processing}, S. 41)}
+    \label{fig:fourier}
+    \end{figure}
+    % Music Processing S.41
+    %
 \par
 
 Anschließend werden unterschiedliche Vergleichsfunktion für die jeweiligen Frequenzen mit dem Ausschnitt der Tonspur verglichen. Die Ähnlichkeiten der jeweiligen Frequenzen werden in (f) wiedergegeben.
@@ -234,15 +234,6 @@ In \cref{fig:fourier}(c) ist die Übereinstimmung für die Frequenz w = 262 Hz b
 \par
 
 Die Frequenz 262 entspricht der Note C4. Darüberhinaus wird bei einer Frequenz von 523 (siehe \cref{fig:fourier}(e)) eine hohe Übereinstimmung erkannt. Dies entspricht ungefähr der Frequenz des zweiten Teils der Note C4 (zweiter Teil?).
-
-%
-\begin{figure}
-\includegraphics[width=1\textwidth]{images/Fourier_math.PNG}
-\caption{Note C4 in unterschiedlichen Darstellungen}
-\label{fig:fourier}
-\end{figure}
-% Music Processing S.41
-%
 
 %
 \textbf{Nachteile}

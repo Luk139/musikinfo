@@ -18,10 +18,10 @@
 
 
 \refsection{0}
-  \datalist[entry]{nty/global//global/global/global}
+  \datalist[entry]{nyt/global//global/global/global}
     \entry{wavelets}{online}{}{}
       \name{author}{1}{}{%
-        {{hash=d584cf8e37ead65021612f68bf54b370}{%
+        {{un=0,uniquepart=base,hash=d584cf8e37ead65021612f68bf54b370}{%
            family={{Artem Kirsanov}},
            familyi={A\bibinitperiod}}}%
       }
@@ -35,6 +35,8 @@
       \strng{authorfullhashraw}{d584cf8e37ead65021612f68bf54b370}
       \field{sortinit}{A}
       \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{month}{8}
@@ -50,11 +52,12 @@
     \endentry
     \entry{Ashbourn_2020}{book}{}{}
       \name{author}{1}{}{%
-        {{hash=4819bd6d8966ec29dde6300aa867eaf6}{%
+        {{un=0,uniquepart=base,hash=4819bd6d8966ec29dde6300aa867eaf6}{%
            family={Ashbourn},
            familyi={A\bibinitperiod},
            given={Julian},
-           giveni={J\bibinitperiod}}}%
+           giveni={J\bibinitperiod},
+           givenun=0}}%
       }
       \list{location}{1}{%
         {Berkhamsted}%
@@ -72,6 +75,8 @@
       \strng{authorfullhashraw}{4819bd6d8966ec29dde6300aa867eaf6}
       \field{sortinit}{A}
       \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{edition}{1.}
@@ -81,7 +86,7 @@
     \endentry
     \entry{what_is_audio_compression}{online}{}{}
       \name{author}{1}{}{%
-        {{hash=050ef93ad77ba0d775973ee0f4e628e0}{%
+        {{un=0,uniquepart=base,hash=050ef93ad77ba0d775973ee0f4e628e0}{%
            family={{Audioengine}},
            familyi={A\bibinitperiod}}}%
       }
@@ -95,6 +100,7 @@
       \strng{authorfullhashraw}{050ef93ad77ba0d775973ee0f4e628e0}
       \field{sortinit}{A}
       \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labeldatesource}{nodate}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{note}{Abgerufen am 31.08.2024}
@@ -106,9 +112,68 @@
       \verb https://audioengine.com/explore/what-is-audio-compression-and-why-should-you-care/
       \endverb
     \endentry
+    \entry{signaltoene}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=4b9823c035a1efb6324093b59de18c7b}{%
+           family={{Auersignal}},
+           familyi={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{4b9823c035a1efb6324093b59de18c7b}
+      \strng{fullhash}{4b9823c035a1efb6324093b59de18c7b}
+      \strng{fullhashraw}{4b9823c035a1efb6324093b59de18c7b}
+      \strng{bibnamehash}{4b9823c035a1efb6324093b59de18c7b}
+      \strng{authorbibnamehash}{4b9823c035a1efb6324093b59de18c7b}
+      \strng{authornamehash}{4b9823c035a1efb6324093b59de18c7b}
+      \strng{authorfullhash}{4b9823c035a1efb6324093b59de18c7b}
+      \strng{authorfullhashraw}{4b9823c035a1efb6324093b59de18c7b}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labeldatesource}{nodate}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Abgerufen am 19.08.2024}
+      \field{title}{{Signaltöne}}
+      \verb{urlraw}
+      \verb https://www.auersignal.com/de/technische-informationen/akustische-signalgerate/signaltone/
+      \endverb
+      \verb{url}
+      \verb https://www.auersignal.com/de/technische-informationen/akustische-signalgerate/signaltone/
+      \endverb
+    \endentry
+    \entry{acoustic_electric_digital_instruments}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=c982707bfe3637034e452df571c580b1}{%
+           family={{Dr. Victor Ezquerra}},
+           familyi={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{c982707bfe3637034e452df571c580b1}
+      \strng{fullhash}{c982707bfe3637034e452df571c580b1}
+      \strng{fullhashraw}{c982707bfe3637034e452df571c580b1}
+      \strng{bibnamehash}{c982707bfe3637034e452df571c580b1}
+      \strng{authorbibnamehash}{c982707bfe3637034e452df571c580b1}
+      \strng{authornamehash}{c982707bfe3637034e452df571c580b1}
+      \strng{authorfullhash}{c982707bfe3637034e452df571c580b1}
+      \strng{authorfullhashraw}{c982707bfe3637034e452df571c580b1}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{8}
+      \field{note}{Abgerufen am 19.08.2024}
+      \field{title}{{The Difference Between Acoustic, Electric and Digital Instruments}}
+      \field{year}{2020}
+      \verb{urlraw}
+      \verb https://www.metromusicmakers.com/2020/08/the-difference-between-acoustic-electric-and-digital-instruments/
+      \endverb
+      \verb{url}
+      \verb https://www.metromusicmakers.com/2020/08/the-difference-between-acoustic-electric-and-digital-instruments/
+      \endverb
+    \endentry
     \entry{wav}{online}{}{}
       \name{author}{1}{}{%
-        {{hash=3e9a0b0628ffd60083a77ba4aed1795b}{%
+        {{un=0,uniquepart=base,hash=3e9a0b0628ffd60083a77ba4aed1795b}{%
            family={{e-teaching.org}},
            familyi={e\bibinitperiod}}}%
       }
@@ -122,6 +187,7 @@
       \strng{authorfullhashraw}{3e9a0b0628ffd60083a77ba4aed1795b}
       \field{sortinit}{e}
       \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
+      \field{labeldatesource}{nodate}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{note}{Abgerufen am 31.08.2024}
@@ -135,7 +201,7 @@
     \endentry
     \entry{digital_representation}{online}{}{}
       \name{author}{1}{}{%
-        {{hash=afffb289b671701e56cfa64f86884d5d}{%
+        {{un=0,uniquepart=base,hash=afffb289b671701e56cfa64f86884d5d}{%
            family={{Electronic Music Interactive}},
            familyi={E\bibinitperiod}}}%
       }
@@ -149,6 +215,7 @@
       \strng{authorfullhashraw}{afffb289b671701e56cfa64f86884d5d}
       \field{sortinit}{E}
       \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
+      \field{labeldatesource}{nodate}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{note}{Abgerufen am 31.08.2024}
@@ -162,16 +229,18 @@
     \endentry
     \entry{Karmasin_2019}{book}{}{}
       \name{author}{2}{}{%
-        {{hash=a1701ee78b136e928d00196a34eef068}{%
+        {{un=0,uniquepart=base,hash=a1701ee78b136e928d00196a34eef068}{%
            family={Karmasin},
            familyi={K\bibinitperiod},
            given={Matthias},
-           giveni={M\bibinitperiod}}}%
-        {{hash=3933b2403eb4d4c0a768e6ea8146f440}{%
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3933b2403eb4d4c0a768e6ea8146f440}{%
            family={Ribing},
            familyi={R\bibinitperiod},
            given={Rainer},
-           giveni={R\bibinitperiod}}}%
+           giveni={R\bibinitperiod},
+           givenun=0}}%
       }
       \list{location}{1}{%
         {Wien}%
@@ -189,6 +258,8 @@
       \strng{authorfullhashraw}{4a502ed8508df2be61396d5367f8bc56}
       \field{sortinit}{K}
       \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{edition}{10., überarbeitete und aktualisierte Auflage}
@@ -198,7 +269,7 @@
     \endentry
     \entry{manipulate_audio_file}{online}{}{}
       \name{author}{1}{}{%
-        {{hash=b1a6f0b085d099ebe0b1689157357d08}{%
+        {{un=0,uniquepart=base,hash=b1a6f0b085d099ebe0b1689157357d08}{%
            family={{Ken}},
            familyi={K\bibinitperiod}}}%
       }
@@ -212,6 +283,8 @@
       \strng{authorfullhashraw}{b1a6f0b085d099ebe0b1689157357d08}
       \field{sortinit}{K}
       \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{month}{10}
@@ -228,7 +301,7 @@
     \endentry
     \entry{audioformate_im_überblick}{online}{}{}
       \name{author}{1}{}{%
-        {{hash=f85b224c11a5d7c266330d737d7e1ef2}{%
+        {{un=0,uniquepart=base,hash=f85b224c11a5d7c266330d737d7e1ef2}{%
            family={{Lehrerinnenfortbildung Baden-Württemberg}},
            familyi={L\bibinitperiod}}}%
       }
@@ -242,6 +315,7 @@
       \strng{authorfullhashraw}{f85b224c11a5d7c266330d737d7e1ef2}
       \field{sortinit}{L}
       \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{labeldatesource}{nodate}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{note}{Abgerufen am 31.08.2024}
@@ -256,6 +330,7 @@
     \entry{librosa}{online}{}{}
       \field{sortinit}{L}
       \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{labeldatesource}{nodate}
       \field{labeltitlesource}{title}
       \field{note}{Abgerufen am 31.08.2024}
       \field{title}{{Librosa}}
@@ -269,7 +344,7 @@
     \endentry
     \entry{sheet_music_representations}{online}{}{}
       \name{author}{1}{}{%
-        {{hash=72d08c65bfb2ea04e4867c6bdaeb4065}{%
+        {{un=0,uniquepart=base,hash=72d08c65bfb2ea04e4867c6bdaeb4065}{%
            family={{Meinard Müller and Vlora Arifi-Müller}},
            familyi={M\bibinitperiod}}}%
       }
@@ -283,6 +358,7 @@
       \strng{authorfullhashraw}{72d08c65bfb2ea04e4867c6bdaeb4065}
       \field{sortinit}{M}
       \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labeldatesource}{nodate}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{note}{Abgerufen am 19.08.2024}
@@ -296,11 +372,12 @@
     \endentry
     \entry{fundamentals_of_music_processing}{book}{}{}
       \name{author}{1}{}{%
-        {{hash=80b6d841b668c1c8aa2744a675afd39e}{%
+        {{un=0,uniquepart=base,hash=80b6d841b668c1c8aa2744a675afd39e}{%
            family={Müller},
            familyi={M\bibinitperiod},
            given={Meinard},
-           giveni={M\bibinitperiod}}}%
+           giveni={M\bibinitperiod},
+           givenun=0}}%
       }
       \list{location}{1}{%
         {Erlangen}%
@@ -318,15 +395,45 @@
       \strng{authorfullhashraw}{80b6d841b668c1c8aa2744a675afd39e}
       \field{sortinit}{M}
       \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{edition}{2.}
       \field{title}{Fundamentals of Music Processing}
       \field{year}{2021}
     \endentry
+    \entry{mp3_most_popular}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=550323bbb42dc74df085da4c2954ce6b}{%
+           family={{NRWision}},
+           familyi={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{550323bbb42dc74df085da4c2954ce6b}
+      \strng{fullhash}{550323bbb42dc74df085da4c2954ce6b}
+      \strng{fullhashraw}{550323bbb42dc74df085da4c2954ce6b}
+      \strng{bibnamehash}{550323bbb42dc74df085da4c2954ce6b}
+      \strng{authorbibnamehash}{550323bbb42dc74df085da4c2954ce6b}
+      \strng{authornamehash}{550323bbb42dc74df085da4c2954ce6b}
+      \strng{authorfullhash}{550323bbb42dc74df085da4c2954ce6b}
+      \strng{authorfullhashraw}{550323bbb42dc74df085da4c2954ce6b}
+      \field{sortinit}{N}
+      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
+      \field{labeldatesource}{nodate}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Abgerufen am 19.08.2024}
+      \field{title}{{Audioformate im Vergleich}}
+      \verb{urlraw}
+      \verb https://www.nrwision.de/mitmachen/wissen/audioformate-vergleich
+      \endverb
+      \verb{url}
+      \verb https://www.nrwision.de/mitmachen/wissen/audioformate-vergleich
+      \endverb
+    \endentry
     \entry{FFT_grundlagen}{online}{}{}
       \name{author}{1}{}{%
-        {{hash=0ae03ce3919479bdb41f06bcd4ed1333}{%
+        {{un=0,uniquepart=base,hash=0ae03ce3919479bdb41f06bcd4ed1333}{%
            family={{NTi Audio}},
            familyi={N\bibinitperiod}}}%
       }
@@ -340,6 +447,7 @@
       \strng{authorfullhashraw}{0ae03ce3919479bdb41f06bcd4ed1333}
       \field{sortinit}{N}
       \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
+      \field{labeldatesource}{nodate}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{note}{Abgerufen am 31.08.2024}
@@ -353,7 +461,7 @@
     \endentry
     \entry{what_is_a_wav_file}{online}{}{}
       \name{author}{1}{}{%
-        {{hash=860aa7fd7eca5e9452f922fa29bea752}{%
+        {{un=0,uniquepart=base,hash=860aa7fd7eca5e9452f922fa29bea752}{%
            family={{Roxio}},
            familyi={R\bibinitperiod}}}%
       }
@@ -367,6 +475,7 @@
       \strng{authorfullhashraw}{860aa7fd7eca5e9452f922fa29bea752}
       \field{sortinit}{R}
       \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{labeldatesource}{nodate}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{note}{Abgerufen am 31.08.2024}
@@ -380,7 +489,7 @@
     \endentry
     \entry{music_extraction}{online}{}{}
       \name{author}{1}{}{%
-        {{hash=ba0637213b3479edb1029d21c8a2e1c1}{%
+        {{un=0,uniquepart=base,hash=ba0637213b3479edb1029d21c8a2e1c1}{%
            family={{Stephen William}},
            familyi={S\bibinitperiod}}}%
       }
@@ -394,6 +503,8 @@
       \strng{authorfullhashraw}{ba0637213b3479edb1029d21c8a2e1c1}
       \field{sortinit}{S}
       \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{month}{10}
