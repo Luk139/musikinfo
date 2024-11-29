@@ -9,9 +9,8 @@ Um ein grundlegendes Verständnis für die Analyse von Dateiformaten zu entwicke
 \begin{enumerate}
     \item Was ist ein Ton
     \item Formen der Musikdarstellung
-    \item (Darstellung in der Mathematik)
-    \item Vorstellung Fourier-Transformation
-    \item Alternative Methode zur Fourier-Transformation
+    \item Vorstellung der Fourier Transform
+    \item Alternative Methode zur Fourier Transform
     \item Trennung von Instrumenten im Code
     \item Vorgehen im Projekt (evtl früher)
     \item Wie kann man auf dem Stand aufbauen? (/Wie könnte es weitergehen?)
@@ -23,11 +22,11 @@ Um ein grundlegendes Verständnis für die Analyse von Dateiformaten zu entwicke
 \end{enumerate}
 %
 
-Um einen Algorithmus zu implementieren, ist es hilfreich die unterschieden Musikdarstellungen kennenzulernen. Für eine effektive Fourier-Transformation gibt es Vor. Manche Voraussetzungen für eine effektive Fourier-Transformation werden nur von wenigen Musikdarstellungen erfüllt.
+Um einen Algorithmus zu implementieren, ist es hilfreich die unterschiedlichen Musikdarstellungen kennenzulernen. Für eine effektive Fourier Transform gibt es Voraussetzungen, die nur von wenigen Musikdarstellungen erfüllt werden.
 
 \par
 
-Außerdem ist es relevant ein Verständnis für die Fourier-Transformation und andere Methoden zu entwickeln, um nachzuvollziehen warum die Fourier-Transformation geeignet ist. Zudem hilft ein Verständnis bei der Implementierung des Codes.
+Außerdem ist es relevant ein Verständnis für die Fourier-Transformation und andere Methoden zu entwickeln, um nachzuvollziehen warum die Fourier Transform geeignet ist. Zudem hilft ein Verständnis bei der Implementierung des Codes.
 
 %
 \section{Was ist ein Ton?}
@@ -69,7 +68,7 @@ Musik kann unterschiedlich dargestellt werden. Je nach Bedarf, wird eine andere 
 
 \par
 
-Eine weitere Form der Darstellung, ist die Audiodarstellung. In diesen Darstellungen werden alle Informationen der Töne als Audiosignale digital gespeichert und geteilt. Es werden die Schallwellen eines Tons (siehe \cref{sounds}) aufgenommen und digital als eine Wellenfunktion gespeichert, die an der Schallwelle orientiert ist. Dazu gehören auch das Timing, die Intensität, die Lautstärke, die Länge des Tons und vieles mehr. Es werden nicht die einzelnen Töne und Noten gespeichert, sondern die Frequenzen während der Aufnahme in Abhängigkeit zur Zeit. Die Audiodatei kann auch Nebengeräusche oder weitere Instrumente beihalten (\cite{fundamentals_of_music_processing}, S. 1ff).
+Eine weitere Form der Darstellung, ist die Audiodarstellung. In diesen Darstellungen werden alle Informationen der Töne als Audiosignale digital gespeichert und geteilt. Es werden die Schallwellen eines Tons (siehe \cref{sounds}) aufgenommen und digital als eine Wellenform gespeichert, die an der Schallwelle orientiert ist. Dazu gehören auch das Timing, die Intensität, die Lautstärke, die Länge des Tons und vieles mehr. Es werden nicht die einzelnen Töne und Noten gespeichert, sondern die Frequenzen während der Aufnahme in Abhängigkeit zur Zeit. Die Audiodatei kann auch Nebengeräusche oder weitere Instrumente beihalten (\cite{fundamentals_of_music_processing}, S. 1ff).
 
 \subsection{Einordnung in den Projektkontext}
 
@@ -115,7 +114,7 @@ Die Quantisierungsschrittweite beschreibt die Auflösung, mit der jedes Sample k
 \subsection{Waveform Audio File Format}
 %
 
-Das Waveform Audio File Format (kurz: WAV) speichert Audioaufnahmen unkomprimiert \parencite{what_is_a_wav_file}. Der Begriff leitet sich \enquote{vom englischen Wort \enquote{wave}} für Schallwelle ab \parencite{wav}. Für die in diesem Projekt behandelte Fourier-Transformation sind insbesondere die \enquote{Abtastrate fs des Messsystems} und die Quantisierungsschrittweite (siehe \cref{compression}) entscheidend  \parencite{FFT_grundlagen}. Aufgrund der unkomprimierten Speicherung (und der damit verbundenen hohen Abtastrate und Quantisierungsschrittweite) lässt sich eine klare Trennung von Tonspuren ermöglichen (Referenz?).
+Das Waveform Audio File Format (kurz: WAV) speichert Audioaufnahmen unkomprimiert \parencite{what_is_a_wav_file}. Der Begriff leitet sich \enquote{vom englischen Wort \enquote{wave}} für Schallwelle ab \parencite{wav}. Für die in diesem Projekt behandelte Fourier Transform sind insbesondere die \enquote{Abtastrate fs des Messsystems} und die Quantisierungsschrittweite (siehe \cref{compression}) entscheidend  \parencite{FFT_grundlagen}. Aufgrund der unkomprimierten Speicherung (und der damit verbundenen hohen Abtastrate und Quantisierungsschrittweite) lässt sich eine klare Trennung von Tonspuren ermöglichen (Referenz?).
 
 
 %
@@ -144,31 +143,31 @@ Eine Aufnahme speichert das aufgenommene Signal in Abhängigkeit zur Zeit. Jedes
 
 \par
 
-Die Trennung von Instrumenten innerhalb einer Tonspur ist ein Thema, das in Forschung und Bildung intensiv behandelt wird (Quelle?). Die am häufigsten verwendete Methode ist die Fourier-Transformation (Quelle?), die es ermöglicht, ein Signal in seine Frequenzkomponenten zu zerlegen.
+Die Trennung von Instrumenten innerhalb einer Tonspur ist ein Thema, das in Forschung und Bildung intensiv behandelt wird (Quelle?). Die am häufigsten verwendete Methode ist die Fourier Transform (Quelle?), die es ermöglicht, ein Signal in seine Frequenzkomponenten zu zerlegen.
 
 \par
 
-Neben der Fourier-Transformation werden auch andere Ansätze wie die Wavelet-Transformation, die Short-Time Fourier Transform (STFT), sowie statistische Verfahren wie die Blind Source Separation (BSS) und die Independent Component Analysis (ICA) eingesetzt. Darüber hinaus finden moderne Verfahren des maschinellen Lernens, insbesondere neuronale Netzwerke, zunehmend Anwendung in der Trennung von Audiosignalen.
+Neben der Fourier Transform werden auch andere Ansätze wie die WaveletbTransform, die Short-Time Fourier Transform (kurz: STFT), sowie statistische Verfahren wie die Blind Source Separation (BSS) und die Independent Component Analysis (ICA) eingesetzt. Darüber hinaus finden moderne Verfahren des maschinellen Lernens, insbesondere neuronale Netzwerke, zunehmend Anwendung in der Trennung von Audiosignalen.
 
 %
-\subsection{Fourier-Transformation}
+\subsection{Fourier Transform}
 %
 
-Die Fourier-Transformation ist ein Algorithmus der die Darstellung einer Tondatei verändert. Ursprünglich liegt die Audiospur mit einer Kombination aus unterschiedlichen Frequenzen in Abhängigkeit zur Zeit vor. In dieser Darstellung sind die unterschiedlichen Signale schwierig zu trennen und werden von der Fourier-Transformation transformiert.
+Die Fourier Transform ist ein Algorithmus der die Darstellung einer Tondatei verändert. Ursprünglich liegt die Audiospur mit einer Kombination aus unterschiedlichen Frequenzen in Abhängigkeit zur Zeit vor. In dieser Darstellung sind die unterschiedlichen Signale schwierig zu trennen und werden von der Fourier Transform transformiert.
 
 \par
 
 %
-\subsubsection{Entwicklung der Fourier-Transformation}
+\subsubsection{Entwicklung der Fourier Transform}
 %
 
-Die Fourier-Transformation ist eine Verallgemeinerung der Fourierreihen. Diese Reihen können stetige oder stückweise stetige Funktionen in eine Summe von Sinus- und Kosinusfunktionen zerlegen. Bereits im 18. Jahrhundert wurden Fourierreihen für spezifische Funktionen entdeckt. 1822 stellte Joseph Fourier die Hypothese auf, dass sich jede Funktion als Summe solcher Reihen darstellen lässt. Erst im 20. Jahrhundert wurden Fourierreihen auch für andere stetige oder stückweise stetige Funktionen formal bewiesen. Dank der Vollständigkeiten der Funktionenreihe lässt sich die Fourier-Transformation auf eine Vielzahl von Funktionen anwenden, einschließlich periodischer und nicht-periodischer Funktionen, und erhielt ihren Namen zu Ehren von Fourier.
+Die Fourier Transform ist eine Verallgemeinerung der Fourierreihen. Diese Reihen können stetige oder stückweise stetige Funktionen in eine Summe von Sinus- und Kosinusfunktionen zerlegen. Bereits im 18. Jahrhundert wurden Fourierreihen für spezifische Funktionen entdeckt. 1822 stellte Joseph Fourier die Hypothese auf, dass sich jede Funktion als Summe solcher Reihen darstellen lässt. Erst im 20. Jahrhundert wurden Fourierreihen auch für andere stetige oder stückweise stetige Funktionen formal bewiesen. Dank der Vollständigkeiten der Funktionenreihe lässt sich die Fourier Transform auf eine Vielzahl von Funktionen anwenden, einschließlich periodischer und nicht-periodischer Funktionen, und erhielt ihren Namen zu Ehren von Fourier.
 
 \par
 
 \subsubsection{Durchführung der Transformation}
 
-Die Fourier-Transformation ist ein mathematisches Verfahren, bei dem ein Signal aus dem Zeitbereich in den Frequenzbereich transformiert wird. Die Transformation ermöglicht es, beliebige periodische und stückweise stetige Funktionen als Summe von Sinus- und Kosinuswellen unterschiedlicher Frequenzen darzustellen.
+Die Fourier Transform ist ein mathematisches Verfahren, bei dem ein Signal aus dem Zeitbereich in den Frequenzbereich transformiert wird. Die Transformation ermöglicht es, beliebige periodische und stückweise stetige Funktionen als Summe von Sinus- und Kosinuswellen unterschiedlicher Frequenzen darzustellen.
 
 \par
 
@@ -195,7 +194,7 @@ Das Signal oder die Signale, die von der Tonspur getrennt werden, können in der
 % \textbf{Blocklänge (/engl.?)}
 % %
 
-% Ein wesentlicher Parameter für die Durchführung der Fourier-Transformation ist die Blocklänge (kurz: BL), welche die Anzahl der Samples festlegt, die in der Fourier-Transformation analysiert werden.
+% Ein wesentlicher Parameter für die Durchführung der Fourier Transform ist die Blocklänge (kurz: BL), welche die Anzahl der Samples festlegt, die in der Fourier Transform analysiert werden.
 
 % \par
 
@@ -239,7 +238,7 @@ Die Frequenz 262 entspricht der Note C4. Darüberhinaus wird bei einer Frequenz 
 \textbf{Nachteile}
 %
     
-Die Fourier-Transformation ermöglicht es je nach Bedarf zwischen der zeitlichen oder der sequentiellen Darstellung zu wechseln. Allerdings ist bei der Fourier-Transformation der Wechsel zwischen den Darstellung notwendig und es wird entweder die zeitliche oder die frequentielle Komponente ignoriert. Bei der Anwendung der Fourier-Transformation gibt es keine Darstellung die beide Komponenten kombiniert.
+Die Fourier Transform ermöglicht es je nach Bedarf zwischen der zeitlichen oder der sequentiellen Darstellung zu wechseln. Allerdings ist bei der Fourier Transform der Wechsel zwischen den Darstellung notwendig und es wird entweder die zeitliche oder die frequentielle Komponente ignoriert. Bei der Anwendung der Fourier Transform gibt es keine Darstellung die beide Komponenten kombiniert.
 
     - Darstellung (nie Zeit und Frequenz)
 
@@ -247,32 +246,32 @@ Die Fourier-Transformation ermöglicht es je nach Bedarf zwischen der zeitlichen
 (Lukas: Alle Instrumente bzw Töne der Instrumente liegen als Sinuswellen vor)
 
 %
-\subsection{Wavelet-Transformation}
+\subsection{Wavelet Transform}
 \label{wavelet-transformation}
 %
 
-Die Wavelet-Transformation ist ein Vorgehen, das eine Funktion der zeitlichen Darstellung in eine 3(-?)dimensionale Darstellung in Abhhängigkeit von Zeit und Frequenz transformiert. Dafür werden Wellenfunktionen mit der ursprünglichen Funktion auf Übereinstimmungen verglichen. Es gibt unterschiedliche Wellenfunktionen und sie werden Wavelets genannt. Der Name ist aus dem französichen und wird in kleine Welle oder Wellchen übersetzt.
+Die Wavelet Transform ist ein Verfahren, das eine zeitliche Darstellung einer Funktion in eine dreidimensionale Darstellung in Abhhängigkeit von Zeit und Frequenz überführt. Dabei werden sogenannte Wavelets - spezielle Wellenfunktionen - mit der ursprünglichen Funktion verglichen, um Übereinstimmungen zu finden. Der Begriff \enquote{Wavelet} stammt aus dem Französischen und bedeutet \enquote{kleine Welle} oder \enquote{Wellchen}.
 
 \par
 
-Im Gegensatz zu der ursprünglichen Funktion sind die Flächen der Wavelets endlich und daher der Name (finite energy). Eine weitere Bedingung für Wavelets ist, dass das Integral null ergibt. Also die Fläche über und unter der X-Achse gleichgroß ist (Admissibility condition). Jedes Wavelet wird um die Parameter m und b ergänzt.
+Im Gegensatz zur ursprünglichen Funktion haben die Wavelets eine endliche Fläche (auch: finite energy), was sie begrenzt und lokalisiert. Eine weitere Bedingung für Wavelets ist, dass ihr Integral gleich null ergibt, d.h., dass die Fläche über und unter der X-Achse gleich groß ist (Admissibility condition). 
+
+\par
+
+Jedes Wavelet wird durch die Parameter m und b ergänzt:
 
 %
 \begin{itemize}
-    \item[m:] Bestimmt die Frequenz der Wavelet
-    \item[b:] Bestimmt den Zeitpunkt der Wavelet
+    \item[m:] Bestimmt die Frequenz des Wavelets
+    \item[b:] Bestimmt den Zeitpunkt des Wavelets
 \end{itemize}
 %
 
-Zudem hat das Wavelet einen realen und einen imaginären Teil. Das bedeutet, dass durch die Ergänzung der imaginären Zahl die Wavelet um eine Achse ergänzt wird und 3(-?)dimensional wird. Sowohl der reale als auch der imaginäre Teil der Wavelet werden mit der Funktionen verglichen und durch die Multiplikation (Begriff?) erhält man die Ähnlichkeit der Funktion und der Wavelet.
+Zudem besitzt das Wavelet einen realen und einen imaginären Teil. Durch die Berücksichtigung des imaginären Teils entsteht eine dreidimensionale Darstellung des Signals. Bei der Wavelet Transform wird sowohl der reale als auch der imaginäre Teil des Wavelets mit der Funktion korreliert (Mathematik: Korrelation), um die Ähnlichkeit der Funktion und des Wavelets zu berechnen. Diese Ähnlichkeit wird für jedes m und b ermittelt und in einem dreidimensionalen Ausgabe-Graphen in Abhängigkeit von der Zeit dargestellt. Dadurch ergibt sich eine Darstellung des Signals in Bezug auf Zeit und Frequenz.
 
 \par
 
-Die Ähnlichkeit der Wavelet mit der Funktion wird für jedes m und b berechnet und in dem 3-dimensionalen Ausgabe-Graphen in Abhängigkeit zur Zeit angegeben. Dies hat den Vorteil das man eine Darstellung des Signals in Abhängigkeit von Zeit und Frequenz erstellen kann.
-
-\par
-
-Dies kann beispielsweise sinnvoll in der Überprüfung von Ampelleuchten sein. Während die Fourier-Transformation die unterschiedlichen Frequenzen der Farben grün, gelb und rot erkennt und wiedergibt ob die drei Lichter leuchten, kann die Wavelet-Transformation angeben, ob die Lampen jeweils zum richtigen Zeitpunkt leuchten \parencite{wavelets}.
+Ein Anwendungsfall ist die Überprüfung von Ampelleuchten. Während die Fourier-Transformation die verschiedenen Frequenzen der Farben Grün, Gelb und Rot erkennen kann, um festzustellen, ob die Lampen leuchten, erlaubt die Wavelet Transform zusätzlich die Angabe, ob die Lichter zu den richtigen Zeitpunkten aufleuchten \parencite{wavelets}.
 
 %
  - verwendet spezialisierte Funktionen: Wavelets
