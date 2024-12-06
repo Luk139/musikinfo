@@ -19,37 +19,6 @@
 
 \refsection{0}
   \datalist[entry]{nyt/global//global/global/global}
-    \entry{wavelets}{online}{}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=d584cf8e37ead65021612f68bf54b370}{%
-           family={{Artem Kirsanov}},
-           familyi={A\bibinitperiod}}}%
-      }
-      \strng{namehash}{d584cf8e37ead65021612f68bf54b370}
-      \strng{fullhash}{d584cf8e37ead65021612f68bf54b370}
-      \strng{fullhashraw}{d584cf8e37ead65021612f68bf54b370}
-      \strng{bibnamehash}{d584cf8e37ead65021612f68bf54b370}
-      \strng{authorbibnamehash}{d584cf8e37ead65021612f68bf54b370}
-      \strng{authornamehash}{d584cf8e37ead65021612f68bf54b370}
-      \strng{authorfullhash}{d584cf8e37ead65021612f68bf54b370}
-      \strng{authorfullhashraw}{d584cf8e37ead65021612f68bf54b370}
-      \field{sortinit}{A}
-      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{month}{8}
-      \field{note}{Abgerufen am 19.08.2024}
-      \field{title}{{Wavelets: a mathematical microscope}}
-      \field{year}{2022}
-      \verb{urlraw}
-      \verb https://youtu.be/jnxqHcObNK4?si=1VZPZquUYXSuI4vN
-      \endverb
-      \verb{url}
-      \verb https://youtu.be/jnxqHcObNK4?si=1VZPZquUYXSuI4vN
-      \endverb
-    \endentry
     \entry{Ashbourn_2020}{book}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=4819bd6d8966ec29dde6300aa867eaf6}{%
@@ -140,36 +109,125 @@
       \verb https://www.auersignal.com/de/technische-informationen/akustische-signalgerate/signaltone/
       \endverb
     \endentry
-    \entry{acoustic_electric_digital_instruments}{online}{}{}
+    \entry{absatz}{online}{}{}
       \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=c982707bfe3637034e452df571c580b1}{%
-           family={{Dr. Victor Ezquerra}},
-           familyi={D\bibinitperiod}}}%
+        {{un=0,uniquepart=base,hash=a80c7260243a6dd1e93a0edb98d262af}{%
+           family={{Bundesverband Musikindustrie}},
+           familyi={B\bibinitperiod}}}%
       }
-      \strng{namehash}{c982707bfe3637034e452df571c580b1}
-      \strng{fullhash}{c982707bfe3637034e452df571c580b1}
-      \strng{fullhashraw}{c982707bfe3637034e452df571c580b1}
-      \strng{bibnamehash}{c982707bfe3637034e452df571c580b1}
-      \strng{authorbibnamehash}{c982707bfe3637034e452df571c580b1}
-      \strng{authornamehash}{c982707bfe3637034e452df571c580b1}
-      \strng{authorfullhash}{c982707bfe3637034e452df571c580b1}
-      \strng{authorfullhashraw}{c982707bfe3637034e452df571c580b1}
-      \field{sortinit}{D}
-      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \strng{namehash}{a80c7260243a6dd1e93a0edb98d262af}
+      \strng{fullhash}{a80c7260243a6dd1e93a0edb98d262af}
+      \strng{fullhashraw}{a80c7260243a6dd1e93a0edb98d262af}
+      \strng{bibnamehash}{a80c7260243a6dd1e93a0edb98d262af}
+      \strng{authorbibnamehash}{a80c7260243a6dd1e93a0edb98d262af}
+      \strng{authornamehash}{a80c7260243a6dd1e93a0edb98d262af}
+      \strng{authorfullhash}{a80c7260243a6dd1e93a0edb98d262af}
+      \strng{authorfullhashraw}{a80c7260243a6dd1e93a0edb98d262af}
+      \field{extraname}{1}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradate}{1}
+      \field{labeldatesource}{nodate}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Abgerufen am 19.08.2024}
+      \field{title}{{Absatz}}
+      \verb{urlraw}
+      \verb https://www.musikindustrie.de/wie-musik-zur-karriere-werden-kann/musikindustrie-in-zahlen/absatz-2021
+      \endverb
+      \verb{url}
+      \verb https://www.musikindustrie.de/wie-musik-zur-karriere-werden-kann/musikindustrie-in-zahlen/absatz-2021
+      \endverb
+    \endentry
+    \entry{musiknutzung}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=a80c7260243a6dd1e93a0edb98d262af}{%
+           family={{Bundesverband Musikindustrie}},
+           familyi={B\bibinitperiod}}}%
+      }
+      \strng{namehash}{a80c7260243a6dd1e93a0edb98d262af}
+      \strng{fullhash}{a80c7260243a6dd1e93a0edb98d262af}
+      \strng{fullhashraw}{a80c7260243a6dd1e93a0edb98d262af}
+      \strng{bibnamehash}{a80c7260243a6dd1e93a0edb98d262af}
+      \strng{authorbibnamehash}{a80c7260243a6dd1e93a0edb98d262af}
+      \strng{authornamehash}{a80c7260243a6dd1e93a0edb98d262af}
+      \strng{authorfullhash}{a80c7260243a6dd1e93a0edb98d262af}
+      \strng{authorfullhashraw}{a80c7260243a6dd1e93a0edb98d262af}
+      \field{extraname}{2}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradate}{2}
+      \field{labeldatesource}{nodate}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Abgerufen am 19.08.2024}
+      \field{title}{{Musiknutzung}}
+      \verb{urlraw}
+      \verb https://www.musikindustrie.de/wie-musik-zur-karriere-werden-kann/musikindustrie-in-zahlen/musiknutzung-2021
+      \endverb
+      \verb{url}
+      \verb https://www.musikindustrie.de/wie-musik-zur-karriere-werden-kann/musikindustrie-in-zahlen/musiknutzung-2021
+      \endverb
+    \endentry
+    \entry{Prashanth_2017}{article}{}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=cb64137f8c6dafa89c0ab4468a9a960e}{%
+           family={{Chetlur Adithya}},
+           familyi={C\bibinitperiod},
+           given={Prashanth},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5a5e95565f692bef067e5a8d8531c7fb}{%
+           family={Sankar},
+           familyi={S\bibinitperiod},
+           given={Ravi},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=79aed8331e30c5e19af54e7be9ff8251}{%
+           family={Moreno},
+           familyi={M\bibinitperiod},
+           given={Wilfrido\bibnamedelima Alejandro},
+           giveni={W\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e597f5b93c475d83ea9caf571247ae00}{%
+           family={Hart},
+           familyi={H\bibinitperiod},
+           given={Stuart},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{5747b310e914c11fefbe9a26ead37cba}
+      \strng{fullhash}{5747b310e914c11fefbe9a26ead37cba}
+      \strng{fullhashraw}{5747b310e914c11fefbe9a26ead37cba}
+      \strng{bibnamehash}{5747b310e914c11fefbe9a26ead37cba}
+      \strng{authorbibnamehash}{5747b310e914c11fefbe9a26ead37cba}
+      \strng{authornamehash}{5747b310e914c11fefbe9a26ead37cba}
+      \strng{authorfullhash}{5747b310e914c11fefbe9a26ead37cba}
+      \strng{authorfullhashraw}{5747b310e914c11fefbe9a26ead37cba}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{month}{8}
-      \field{note}{Abgerufen am 19.08.2024}
-      \field{title}{{The Difference Between Acoustic, Electric and Digital Instruments}}
-      \field{year}{2020}
+      \field{abstract}{Monitoring the well-being of a fetus through Fetal Phonocardiography (FPCG) has been occurring for more than a century. Throughout history, there have been continuous advances in sensor development, data acquisition systems, and signal processing techniques. Despite these advancements, FPCG based point of care technologies are facing serious challenges in translating from basic research to clinical trials and commercialization. This is partly due to the noisy characteristic associated with FPCG, to the lesser clinical knowledge about fetal and maternal physiological profiles, to the unavailability of gold standard databases, and to the limited application of reliable signal processing techniques. In order to understand why FPCG continues to be underutilized, it is necessary to know about the existing standards of fetal monitoring, data collection trends, and the signal processing aspects. To serve this purpose, this paper will first provide an overview of the existing standards of fetal monitoring and then provide a comprehensive survey on Fetal Phonocardiography with focus on trends in data collection, signal processing techniques and synthesis models that have been developed to date. Finally, a set of guidelines will be proposed for future research and use in signal analysis, processing and modeling based on the outlined challenges.}
+      \field{issn}{1746-8094}
+      \field{journaltitle}{Biomedical Signal Processing and Control}
+      \field{title}{Trends in fetal monitoring through phonocardiography: Challenges and future directions}
+      \field{volume}{33}
+      \field{year}{2017}
+      \field{pages}{289\bibrangedash 305}
+      \range{pages}{17}
+      \verb{doi}
+      \verb https://doi.org/10.1016/j.bspc.2016.11.007
+      \endverb
       \verb{urlraw}
-      \verb https://www.metromusicmakers.com/2020/08/the-difference-between-acoustic-electric-and-digital-instruments/
+      \verb https://www.sciencedirect.com/science/article/pii/S1746809416301859
       \endverb
       \verb{url}
-      \verb https://www.metromusicmakers.com/2020/08/the-difference-between-acoustic-electric-and-digital-instruments/
+      \verb https://www.sciencedirect.com/science/article/pii/S1746809416301859
       \endverb
+      \keyw{Fetal phonocardiography,Fetal monitoring,Fetal heart sounds,De-noising,Fetal heart rate,Phonocardiogram modeling}
     \endentry
     \entry{wav}{online}{}{}
       \name{author}{1}{}{%
@@ -226,6 +284,101 @@
       \verb{url}
       \verb https://pages.uoregon.edu/emi/8.php#:~:text=A%20digital%20representation%20of%20sound%20is%20a%20series%20of%20discrete,spaced%20measurements%20is%20a%20sample%20.
       \endverb
+    \endentry
+    \entry{acoustic_electric_digital_instruments}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=ac74c00e439bf6cf985749f20d37d75e}{%
+           family={{Ezquerra, Dr. Victor}},
+           familyi={E\bibinitperiod}}}%
+      }
+      \strng{namehash}{ac74c00e439bf6cf985749f20d37d75e}
+      \strng{fullhash}{ac74c00e439bf6cf985749f20d37d75e}
+      \strng{fullhashraw}{ac74c00e439bf6cf985749f20d37d75e}
+      \strng{bibnamehash}{ac74c00e439bf6cf985749f20d37d75e}
+      \strng{authorbibnamehash}{ac74c00e439bf6cf985749f20d37d75e}
+      \strng{authornamehash}{ac74c00e439bf6cf985749f20d37d75e}
+      \strng{authorfullhash}{ac74c00e439bf6cf985749f20d37d75e}
+      \strng{authorfullhashraw}{ac74c00e439bf6cf985749f20d37d75e}
+      \field{sortinit}{E}
+      \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{8}
+      \field{note}{Abgerufen am 19.08.2024}
+      \field{title}{{The Difference Between Acoustic, Electric and Digital Instruments}}
+      \field{year}{2020}
+      \verb{urlraw}
+      \verb https://www.metromusicmakers.com/2020/08/the-difference-between-acoustic-electric-and-digital-instruments/
+      \endverb
+      \verb{url}
+      \verb https://www.metromusicmakers.com/2020/08/the-difference-between-acoustic-electric-and-digital-instruments/
+      \endverb
+    \endentry
+    \entry{Guo_2022}{article}{}{}
+      \name{author}{6}{}{%
+        {{un=0,uniquepart=base,hash=f7b28d3d2f4eb717065b8c0fc68c3d1c}{%
+           family={Guo},
+           familyi={G\bibinitperiod},
+           given={Tiantian},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=21b0c3a0f8aa8fc84bcb20ba4908b543}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Tongpo},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1718719af507fbf1dc27c789bbba34bd}{%
+           family={Lim},
+           familyi={L\bibinitperiod},
+           given={Enggee},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ef17ac4037f466e547a4b4a9fcbe0e3e}{%
+           family={López-Benítez},
+           familyi={L\bibinithyphendelim B\bibinitperiod},
+           given={Miguel},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=449c0ffeb60d2915ee2bd04af3fff21b}{%
+           family={Ma},
+           familyi={M\bibinitperiod},
+           given={Fei},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=912b25cb8faf892731545a71767ce40c}{%
+           family={Yu},
+           familyi={Y\bibinitperiod},
+           given={Limin},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{3a8846988022ec8435c67c6d8deb2107}
+      \strng{fullhash}{3a8846988022ec8435c67c6d8deb2107}
+      \strng{fullhashraw}{3a8846988022ec8435c67c6d8deb2107}
+      \strng{bibnamehash}{3a8846988022ec8435c67c6d8deb2107}
+      \strng{authorbibnamehash}{3a8846988022ec8435c67c6d8deb2107}
+      \strng{authornamehash}{3a8846988022ec8435c67c6d8deb2107}
+      \strng{authorfullhash}{3a8846988022ec8435c67c6d8deb2107}
+      \strng{authorfullhashraw}{3a8846988022ec8435c67c6d8deb2107}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Access}
+      \field{title}{A Review of Wavelet Analysis and Its Applications: Challenges and Opportunities}
+      \field{volume}{10}
+      \field{year}{2022}
+      \field{pages}{58869\bibrangedash 58903}
+      \range{pages}{35}
+      \verb{doi}
+      \verb 10.1109/ACCESS.2022.3179517
+      \endverb
+      \keyw{Wavelet transforms;Transforms;Multiresolution analysis;Discrete wavelet transforms;Wavelet packets;Signal resolution;Continuous wavelet transforms;Wavelets;multiresolution analysis;wavelet transform;rational wavelets;wavelet neural network}
     \endentry
     \entry{Karmasin_2019}{book}{}{}
       \name{author}{2}{}{%
@@ -299,6 +452,37 @@
       \verb https://www.codeforests.com/2021/10/02/manipulate-audio-file-in-python/
       \endverb
     \endentry
+    \entry{wavelets}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=e3f2bed340d88bd9f4e8419c518993df}{%
+           family={{Kirsanov, Artem}},
+           familyi={K\bibinitperiod}}}%
+      }
+      \strng{namehash}{e3f2bed340d88bd9f4e8419c518993df}
+      \strng{fullhash}{e3f2bed340d88bd9f4e8419c518993df}
+      \strng{fullhashraw}{e3f2bed340d88bd9f4e8419c518993df}
+      \strng{bibnamehash}{e3f2bed340d88bd9f4e8419c518993df}
+      \strng{authorbibnamehash}{e3f2bed340d88bd9f4e8419c518993df}
+      \strng{authornamehash}{e3f2bed340d88bd9f4e8419c518993df}
+      \strng{authorfullhash}{e3f2bed340d88bd9f4e8419c518993df}
+      \strng{authorfullhashraw}{e3f2bed340d88bd9f4e8419c518993df}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{8}
+      \field{note}{Abgerufen am 19.08.2024}
+      \field{title}{{Wavelets: a mathematical microscope}}
+      \field{year}{2022}
+      \verb{urlraw}
+      \verb https://youtu.be/jnxqHcObNK4?si=1VZPZquUYXSuI4vN
+      \endverb
+      \verb{url}
+      \verb https://youtu.be/jnxqHcObNK4?si=1VZPZquUYXSuI4vN
+      \endverb
+    \endentry
     \entry{audioformate_im_überblick}{online}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=f85b224c11a5d7c266330d737d7e1ef2}{%
@@ -342,34 +526,6 @@
       \verb https://github.com/librosa
       \endverb
     \endentry
-    \entry{sheet_music_representations}{online}{}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=72d08c65bfb2ea04e4867c6bdaeb4065}{%
-           family={{Meinard Müller and Vlora Arifi-Müller}},
-           familyi={M\bibinitperiod}}}%
-      }
-      \strng{namehash}{72d08c65bfb2ea04e4867c6bdaeb4065}
-      \strng{fullhash}{72d08c65bfb2ea04e4867c6bdaeb4065}
-      \strng{fullhashraw}{72d08c65bfb2ea04e4867c6bdaeb4065}
-      \strng{bibnamehash}{72d08c65bfb2ea04e4867c6bdaeb4065}
-      \strng{authorbibnamehash}{72d08c65bfb2ea04e4867c6bdaeb4065}
-      \strng{authornamehash}{72d08c65bfb2ea04e4867c6bdaeb4065}
-      \strng{authorfullhash}{72d08c65bfb2ea04e4867c6bdaeb4065}
-      \strng{authorfullhashraw}{72d08c65bfb2ea04e4867c6bdaeb4065}
-      \field{sortinit}{M}
-      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
-      \field{labeldatesource}{nodate}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{note}{Abgerufen am 19.08.2024}
-      \field{title}{{Sheet Music Representations}}
-      \verb{urlraw}
-      \verb https://www.audiolabs-erlangen.de/resources/MIR/FMP/C1/C1S1_SheetMusic.html
-      \endverb
-      \verb{url}
-      \verb https://www.audiolabs-erlangen.de/resources/MIR/FMP/C1/C1S1_SheetMusic.html
-      \endverb
-    \endentry
     \entry{fundamentals_of_music_processing}{book}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=80b6d841b668c1c8aa2744a675afd39e}{%
@@ -402,6 +558,82 @@
       \field{edition}{2.}
       \field{title}{Fundamentals of Music Processing}
       \field{year}{2021}
+    \endentry
+    \entry{Mueller_2011}{article}{}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=80b6d841b668c1c8aa2744a675afd39e}{%
+           family={Müller},
+           familyi={M\bibinitperiod},
+           given={Meinard},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8c2dba7002458c6a90760f98d2e441f1}{%
+           family={Ellis},
+           familyi={E\bibinitperiod},
+           given={Daniel\bibnamedelimb P.\bibnamedelimi W.},
+           giveni={D\bibinitperiod\bibinitdelim P\bibinitperiod\bibinitdelim W\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5d79b2c1c58f54540fd7dce441be6a83}{%
+           family={Klapuri},
+           familyi={K\bibinitperiod},
+           given={Anssi},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=aec7d43f7c5ea1426c242ee4c14428fd}{%
+           family={Richard},
+           familyi={R\bibinitperiod},
+           given={Gaël},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{d1ff6b23adbfbd751f9654905dbca811}
+      \strng{fullhash}{d1ff6b23adbfbd751f9654905dbca811}
+      \strng{fullhashraw}{d1ff6b23adbfbd751f9654905dbca811}
+      \strng{bibnamehash}{d1ff6b23adbfbd751f9654905dbca811}
+      \strng{authorbibnamehash}{d1ff6b23adbfbd751f9654905dbca811}
+      \strng{authornamehash}{d1ff6b23adbfbd751f9654905dbca811}
+      \strng{authorfullhash}{d1ff6b23adbfbd751f9654905dbca811}
+      \strng{authorfullhashraw}{d1ff6b23adbfbd751f9654905dbca811}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE JOURNAL OF SELECTED TOPICS IN SIGNAL PROCESSING}
+      \field{title}{Signal Processing for Music Analysis}
+      \field{volume}{0}
+      \field{year}{2011}
+      \field{pages}{1}
+      \range{pages}{1}
+    \endentry
+    \entry{sheet_music_representations}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=2f5f45e2d6b45df157153ecd8b13254f}{%
+           family={{Müller, Meinard and Arifi-Müller, Vlora}},
+           familyi={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{2f5f45e2d6b45df157153ecd8b13254f}
+      \strng{fullhash}{2f5f45e2d6b45df157153ecd8b13254f}
+      \strng{fullhashraw}{2f5f45e2d6b45df157153ecd8b13254f}
+      \strng{bibnamehash}{2f5f45e2d6b45df157153ecd8b13254f}
+      \strng{authorbibnamehash}{2f5f45e2d6b45df157153ecd8b13254f}
+      \strng{authornamehash}{2f5f45e2d6b45df157153ecd8b13254f}
+      \strng{authorfullhash}{2f5f45e2d6b45df157153ecd8b13254f}
+      \strng{authorfullhashraw}{2f5f45e2d6b45df157153ecd8b13254f}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labeldatesource}{nodate}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Abgerufen am 19.08.2024}
+      \field{title}{{Sheet Music Representations}}
+      \verb{urlraw}
+      \verb https://www.audiolabs-erlangen.de/resources/MIR/FMP/C1/C1S1_SheetMusic.html
+      \endverb
+      \verb{url}
+      \verb https://www.audiolabs-erlangen.de/resources/MIR/FMP/C1/C1S1_SheetMusic.html
+      \endverb
     \endentry
     \entry{mp3_most_popular}{online}{}{}
       \name{author}{1}{}{%
@@ -459,6 +691,64 @@
       \verb https://www.nti-audio.com/de/service/wissen/fast-fourier-transformation-fft
       \endverb
     \endentry
+    \entry{Parsons_2000}{article}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=9795bdf7c3d511559774e3ded8df2632}{%
+           family={Parsons},
+           familyi={P\bibinitperiod},
+           given={Stuart},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=da8a8b6b72e5fc4ba1f5efcc56e4971d}{%
+           family={Boonman},
+           familyi={B\bibinitperiod},
+           given={Arjan\bibnamedelima M.},
+           giveni={A\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b32b25fe91249e2fa866a14c3b20988f}{%
+           family={Obrist},
+           familyi={O\bibinitperiod},
+           given={Martin\bibnamedelima K.},
+           giveni={M\bibinitperiod\bibinitdelim K\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{2caeb4ad32804a17d0e5688aac34beeb}
+      \strng{fullhash}{2caeb4ad32804a17d0e5688aac34beeb}
+      \strng{fullhashraw}{2caeb4ad32804a17d0e5688aac34beeb}
+      \strng{bibnamehash}{2caeb4ad32804a17d0e5688aac34beeb}
+      \strng{authorbibnamehash}{2caeb4ad32804a17d0e5688aac34beeb}
+      \strng{authornamehash}{2caeb4ad32804a17d0e5688aac34beeb}
+      \strng{authorfullhash}{2caeb4ad32804a17d0e5688aac34beeb}
+      \strng{authorfullhashraw}{2caeb4ad32804a17d0e5688aac34beeb}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Bat researchers currently use a variety of techniques that transform echolocation calls into audible frequencies and allow the spectral content of a signal to be viewed and analyzed. All techniques have limitations and an understanding of how each works and the effect on the signal being analyzed are vital for correct interpretation. The 3 most commonly used techniques for transforming frequencies of a call are heterodyne, frequency division, and time expansion. Three techniques for viewing spectral content of a signal are zero-crossing, Fourier analysis, and instantaneous frequency analysis. It is important for bat researchers to be familiar with the advantages and disadvantages of each technique.}
+      \field{issn}{0022-2372}
+      \field{journaltitle}{Journal of Mammalogy}
+      \field{month}{11}
+      \field{number}{4}
+      \field{title}{Advantages and Disadvantages of Techniques for Transforming and Analyzing Chiropteran Echolocation Calls}
+      \field{volume}{81}
+      \field{year}{2000}
+      \field{pages}{927\bibrangedash 938}
+      \range{pages}{12}
+      \verb{doi}
+      \verb 10.1644/1545-1542(2000)081<0927:AADOTF>2.0.CO;2
+      \endverb
+      \verb{eprint}
+      \verb https://academic.oup.com/jmammal/article-pdf/81/4/927/7022013/81-4-927.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1644/1545-1542(2000)081<0927:AADOTF>2.0.CO;2
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1644/1545-1542(2000)081%3C0927:AADOTF%3E2.0.CO;2
+      \endverb
+    \endentry
     \entry{what_is_a_wav_file}{online}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=860aa7fd7eca5e9452f922fa29bea752}{%
@@ -487,22 +777,81 @@
       \verb https://www.roxio.com/en/file-formats/wav-file/
       \endverb
     \endentry
-    \entry{music_extraction}{online}{}{}
+    \entry{fourier_transform_importance}{online}{}{}
       \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=ba0637213b3479edb1029d21c8a2e1c1}{%
-           family={{Stephen William}},
+        {{un=0,uniquepart=base,hash=f25cb1c6953bb0c62c639f3d7a242ec4}{%
+           family={{Stack Exchange}},
            familyi={S\bibinitperiod}}}%
       }
-      \strng{namehash}{ba0637213b3479edb1029d21c8a2e1c1}
-      \strng{fullhash}{ba0637213b3479edb1029d21c8a2e1c1}
-      \strng{fullhashraw}{ba0637213b3479edb1029d21c8a2e1c1}
-      \strng{bibnamehash}{ba0637213b3479edb1029d21c8a2e1c1}
-      \strng{authorbibnamehash}{ba0637213b3479edb1029d21c8a2e1c1}
-      \strng{authornamehash}{ba0637213b3479edb1029d21c8a2e1c1}
-      \strng{authorfullhash}{ba0637213b3479edb1029d21c8a2e1c1}
-      \strng{authorfullhashraw}{ba0637213b3479edb1029d21c8a2e1c1}
+      \strng{namehash}{f25cb1c6953bb0c62c639f3d7a242ec4}
+      \strng{fullhash}{f25cb1c6953bb0c62c639f3d7a242ec4}
+      \strng{fullhashraw}{f25cb1c6953bb0c62c639f3d7a242ec4}
+      \strng{bibnamehash}{f25cb1c6953bb0c62c639f3d7a242ec4}
+      \strng{authorbibnamehash}{f25cb1c6953bb0c62c639f3d7a242ec4}
+      \strng{authornamehash}{f25cb1c6953bb0c62c639f3d7a242ec4}
+      \strng{authorfullhash}{f25cb1c6953bb0c62c639f3d7a242ec4}
+      \strng{authorfullhashraw}{f25cb1c6953bb0c62c639f3d7a242ec4}
       \field{sortinit}{S}
       \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{8}
+      \field{note}{Abgerufen am 19.08.2024}
+      \field{title}{{Why is the Fourier transform so important?}}
+      \field{year}{2011}
+      \verb{urlraw}
+      \verb https://dsp.stackexchange.com/questions/69/why-is-the-fourier-transform-so-important
+      \endverb
+      \verb{url}
+      \verb https://dsp.stackexchange.com/questions/69/why-is-the-fourier-transform-so-important
+      \endverb
+    \endentry
+    \entry{institute_for_signal_processing}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=3d646c43bd9f4bb90dd8917aa5ee2592}{%
+           family={{Universität zu Lübeck}},
+           familyi={U\bibinitperiod}}}%
+      }
+      \strng{namehash}{3d646c43bd9f4bb90dd8917aa5ee2592}
+      \strng{fullhash}{3d646c43bd9f4bb90dd8917aa5ee2592}
+      \strng{fullhashraw}{3d646c43bd9f4bb90dd8917aa5ee2592}
+      \strng{bibnamehash}{3d646c43bd9f4bb90dd8917aa5ee2592}
+      \strng{authorbibnamehash}{3d646c43bd9f4bb90dd8917aa5ee2592}
+      \strng{authornamehash}{3d646c43bd9f4bb90dd8917aa5ee2592}
+      \strng{authorfullhash}{3d646c43bd9f4bb90dd8917aa5ee2592}
+      \strng{authorfullhashraw}{3d646c43bd9f4bb90dd8917aa5ee2592}
+      \field{sortinit}{U}
+      \field{sortinithash}{6901a00e45705986ee5e7ca9fd39adca}
+      \field{labeldatesource}{nodate}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Abgerufen am 19.08.2024}
+      \field{title}{{Research Activities}}
+      \verb{urlraw}
+      \verb https://www.isip.uni-luebeck.de/research
+      \endverb
+      \verb{url}
+      \verb https://www.isip.uni-luebeck.de/research
+      \endverb
+    \endentry
+    \entry{music_extraction}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=a520c15d8f114b522cc305a14b1741d9}{%
+           family={{William, Stephen}},
+           familyi={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{a520c15d8f114b522cc305a14b1741d9}
+      \strng{fullhash}{a520c15d8f114b522cc305a14b1741d9}
+      \strng{fullhashraw}{a520c15d8f114b522cc305a14b1741d9}
+      \strng{bibnamehash}{a520c15d8f114b522cc305a14b1741d9}
+      \strng{authorbibnamehash}{a520c15d8f114b522cc305a14b1741d9}
+      \strng{authornamehash}{a520c15d8f114b522cc305a14b1741d9}
+      \strng{authorfullhash}{a520c15d8f114b522cc305a14b1741d9}
+      \strng{authorfullhashraw}{a520c15d8f114b522cc305a14b1741d9}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
