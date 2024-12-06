@@ -283,3 +283,19 @@ Ein Anwendungsfall ist die Überprüfung von Ampelleuchten. Während die Fourier
  - endliche Fläche
    - finite energy
    - lokalisiert in Zeit
+
+%
+\subsection{Wahl der Fourier Transform}
+%
+
+Für die Trennug der Instrumente einer Wav-Datei wurde die Fourier Transform gewählt, trotz einiger Alternativen. Die Fourier Transform ist eins der meistverwendeten Werkzeuge der Signalverarbeitung (Müller Kap. 2). Der größte Nachteil der Fourier Transform ist, dass nicht gleichzeitig die Zeit und die Frequenz Domäne dargestellt werden können. Allerdings reicht dies bei der Trennung von Musikinstrumenten, da die Darstellung zum Schluss wieder in die zeitliche Domäne umgeformt werden soll, um das Ergebnis in eine Wav-Datei zu überführen. Außerdem verliert die Fourier Transform wenig Informationen durch die klare Trennung von zeitlicher und frequentieller Darstellung (https://academic.oup.com/jmammal/article-abstract/81/4/927/2372896). Allerdings ist die Fourier Transform bei größeren Dateien aufwändiger und fehleranfälliger, falls die ganze Datei transformiert wird (auch zu Nachteile?). Jedoch wird diese Limitierung durch die Verwendung der Short-Time Fourier Transform reduziert (https://www.sciencedirect.com/science/article/abs/pii/S1746809416301859: 6.1.3.1).
+
+%
+\subsection{Short-Time Fourier Transform}
+%
+
+Die Short-Time Fourier Transform (auch: STFT) basiert auf der Fourier Transform, dessen Nachteile zunehmender Aufwand und fehleranfälligkeit bei der Transformation größerer Dateien beihaltet (siehe: Nachteile oder Wahl?).
+
+\par
+
+Stattdessen teilt die Short Time Fourier Transform eine Datei in mehrere kleine Pakete, deren Transformation effizienter und effektiver durchgeführt werden können. Anschließend werden die Übergäge der Pakete geglättet (Wortwahl?), um unregelmäßigkeiten (groß?) zu vermeiden. In \cref{stft_code} wird die praktische Umsetzung mittels Programmcode dargestellt und die Funktionalität erläutert.
