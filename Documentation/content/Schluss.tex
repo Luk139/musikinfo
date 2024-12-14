@@ -1,0 +1,83 @@
+\chapter{Fazit}
+%
+
+Um eine Trennung verschiedener Musikinstrumentgruppen durchzuführen, wird zuvor die Theorie bearbeitet.
+Hierfür wird der Prozess von der Entstehung eines Tons bis zur Trennung einer Wav-Datei herausgearbeitet.
+Dabei werden Alternativen zu dem vorgegebenen Vorgehen verglichen und evaluiert.
+Es gibt einige alternative Speicherformen von Audio-Dateien (siehe: ...) und alternative Methoden zur Transformation einer Audio-Datei (Synonym?) (siehe: ...).
+
+\par
+
+Anschließend wird die behandelte Theorie anhand einer praktischen Durchführung wiedergegeben.
+Die Ausarbeitung der Theorie und das erworbene Verständnis für das Themengebiet helfen bei der praktischen Umsetzung.
+Damit wird es Leser:innen ermöglicht einen Basiscode zu implementieren, den sie nachvollziehen und darauf aufbauen können.
+Außerdem können durch die Umsetzung des Codes die eingangs gestellten Forschungsfragen und Hypothesen (Kapitel fehlt noch?) beantwortet werden.
+
+%
+\section{Beantwortung der Forschungsfrage}
+%
+
+Durch die Erarbeitung von verbundenem Hintergrundwissen wird ein Algorithmus zur Beantwortung der Forschungsfrage implementiert.
+Dieser bestätigt, dass eine Wav-Datei mit perkussiven und melodischen (richtig?) Instrumenten in die jeweiligen Gruppen trennbar ist.
+Der Programmcode und das Ergebnis einer erfolgreichen Durchführung auf eine Wav-Datei werden an diese Arbeit angehangen (wie?).
+Zudem werden eingangs gestellte Fragen beantwortet und die Hypothesen behandelt.
+
+%
+\textbf{Beantwortung von Unterfragen}
+%
+
+In \cref{sounds} wird erläutert wie ein Ton entsteht und dessen Darstellung in Wellenform aussieht (siehe: \cref{wav_sound}).
+Anhand der Anzahl der Anzahl an Wellen pro Sekunde wird die Frequenz in Hertz berechnet.
+Bei der Analyse mehrerer Töne wird es schwieriger einzelne Signale aus einer Wellenform abzulesen (siehe: \cref{wav_multiple_sounds}).
+
+\par
+
+In diesem Projekt werden ausschließlich akkustische Instrumente verwendet, da diese aufgrund der natürlichen Entstehung effektiver von der Fourier Transform zugeordnet werden können.
+Dabei werden lediglich perkussive von harmonische Instrumente (jeweils Teil der akkustischen Instrumente) getrennt, da deren unterschiedliche Ausschläge differenzierbar sind.
+Allerdings konnte im Rahmen dieses Projekts die Wahl der Musikinstrumentgruppen nicht bewiesen, sondern lediglich recherchiert und referenziert werden.
+
+\par
+
+Es wurden WAV, MP3, WMA, AAC, OGG, FLAC und RM als verbreitete Audio-Speicherformen herausgearbeitet.
+Dabei wurden Wav-Dateien als geeignetste Speicherform für dieses Projekt ermittelt, aufgrund des geringen Speicherverlusts.
+Ebenso hat sich die Fourier Transform als präzisiste Transformation im Gegensatz zur Wavelet Transform herausgestellt.
+Während des Projekts wurde die Short-Time Fourier Transform (STFT) verwendet, die auf der Fourier Transform aufbaut.
+
+%
+\section{Kritische Reflexion der eigenen Arbeit}
+%
+
+Bei der Umsetzung des Codes werden lediglich Zusammenhänge und nicht einzelne Befehle erläutert.
+Um den Algorithmus nachzuvollziehen, werden Vorkenntnisse im Programmieren benötigt.
+Für das weiterarbeiten am Programmcode werden Python-Kenntnisse benötigt (oder?).
+Allerdings wird für ein Verständnisder behandelten Theorie kein Vorwissen benötigt.
+
+\par
+
+Es werden lediglich vorgegebene Gruppen von Musikinstrumenten getrennt.
+Die Trennung einzelner Musikinstrumente oder anderer Instrumentgruppen kann der Algorithmus nicht durchführen (oder?).
+Damit erfüllt der Algorithmus nur einen speziellen Anwendungsfall von den möglichen Instrumenten die getrennt werden.
+
+\par
+
+Das Ergebnis des Projekts ermöglicht ausschließlich dei Verwendung von Wav-Dateien.
+Diese werden aufgrund des hohen Speicherbedarfs selten verwendet und schwierig zu erhalten.
+Bei der Anwendung des Algorithmus auf ein gewähltes Lied, ist es schwierig dieses als Wav-Datei zu finden.
+
+\par
+
+Zudem basiert die Wahl der trennbaren Musikinstrumentgruppen und verwendeten Speicherform lediglich auf einer eingangs gestellten Hypothese.
+Diese Hypothese kann mittels Quellen und erläuterter Zusammenhänge bekräftigt werden.
+Allerdings werden diese Thesen nicht bewiesen durch eine Umsetzung möglicher Alternativen.
+
+%
+\section{Ausblick für die Zukunft}
+%
+
+ - andere oder einzelne Musikinstrumente trennen?
+
+Der Algorithmus kann auf die Trennung von MP3-Dateien angepasst werden.
+Anschließend wird die Qualität der Ergebnisse der Algorithmen verglichen.
+Die erhöhte Zugänglichkeit von MP3-Dateien könnte für einige Anwender:innen den Qualitätsverlust kompensieren.
+
+(Hier noch abschließende Bemerkung oder Anhang?)
