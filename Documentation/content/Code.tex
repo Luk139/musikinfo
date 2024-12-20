@@ -14,11 +14,11 @@ import soundfile as sf
 import numpy as np
 \end{lstlisting}
 
-Hierbei ist \texttt{librosa} die zentrale Bibliothek zur Verarbeitung von Audiodaten, während \texttt{soundfile} für das Schreiben der resultierenden Audiodateien verwendet wird. 
+Hierbei ist \texttt{librosa} die zentrale Bibliothek zur Verarbeitung von Audiodaten, während \texttt{soundfile} für das Schreiben der resultierenden Audiodateien verwendet wird.
 
 \section{Hauptfunktion: \texttt{harmonic\_extraction}}
 
-Die Hauptfunktion des Codes ist \texttt{harmonic\_extraction}, die einen Dateipfad für die Audiodatei und einen Namen für die Ausgabedatei als Parameter erhält. 
+Die Hauptfunktion des Codes ist \texttt{harmonic\_extraction}, die einen Dateipfad für die Audiodatei und einen Namen für die Ausgabedatei als Parameter erhält.
 
 \begin{lstlisting}[language=Python, caption={Die Funktion \texttt{harmonic\_extraction}}]
 def harmonic_extraction(audio_path, output_filename):
@@ -34,22 +34,22 @@ Die Funktion beginnt mit dem Laden der Audiodatei. Die Methode \texttt{librosa.l
 Nach der Zerlegung speichert der Code die beiden Komponenten in separaten Dateien:
 
 \begin{lstlisting}[language=Python, caption={Speichern der Komponenten}]
-    current_dir = os.getcwd()
+current_dir = os.getcwd()
 
-    input_audio_path = os.path.join(current_dir, 'audios', audio_path)
-    output_directory = os.path.join(current_dir, 'extractedfiles')
-    output_path_harmonic = os.path.join(output_directory, output_filename)
-    output_path_percussive = os.path.join(output_directory, 'extracted_percussive.wav')
+input_audio_path = os.path.join(current_dir, 'audios', audio_path)
+output_directory = os.path.join(current_dir, 'extractedfiles')
+output_path_harmonic = os.path.join(output_directory, output_filename)
+output_path_percussive = os.path.join(output_directory, 'extracted_percussive.wav')
 
-    os.makedirs(output_directory, exist_ok=True)
+os.makedirs(output_directory, exist_ok=True)
 
-    sf.write(output_path_harmonic, y_harmonic, sr)
-    print("Harmonic component saved to:", output_path_harmonic)
+sf.write(output_path_harmonic, y_harmonic, sr)
+print("Harmonic component saved to:", output_path_harmonic)
 
-    y_percussive_only = y - y_harmonic
+y_percussive_only = y - y_harmonic
 
-    sf.write(output_path_percussive, y_percussive_only, sr)
-    print("Percussive component saved to:", output_path_percussive)
+sf.write(output_path_percussive, y_percussive_only, sr)
+print("Percussive component saved to:", output_path_percussive)
 \end{lstlisting}
 
 Das obige Codefragment erstellt das Verzeichnis \texttt{extractedfiles} und speichert darin die harmonischen und perkussiven Komponenten als separate Dateien. Die Methode \texttt{sf.write} schreibt das Audiosignal in eine Datei, die anschließend abgespielt oder analysiert werden kann.

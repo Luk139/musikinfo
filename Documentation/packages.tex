@@ -4,6 +4,8 @@
 %
 \usepackage{ifluatex}
 \usepackage{babel}
+\usepackage{float}
+
 %
 \ifluatex
  % LuaLaTeX
@@ -35,6 +37,26 @@
 %=== wichtig, dass folgende Pakete NACH hyperref geladen werden ===============
 \usepackage{scrhack}% Um Warnung bzgl. \float@addtolists im listings-Paket (s.u.) zu vermeiden
 \usepackage{listings}
+\usepackage{listings}
+\usepackage{listingsutf8} % For UTF-8 support in code listings
+\lstset{
+    basicstyle=\ttfamily\small,      % Code font and size
+    breaklines=true,                 % Break long lines
+    captionpos=b,                    % Caption position (below)
+    frame=single,                    % Add a frame around the code
+    numbers=left,                    % Line numbers on the left
+    numberstyle=\tiny,               % Line number font size
+    tabsize=4,                       % Tab spacing
+    keywordstyle=\color{blue},       % Keywords in blue
+    commentstyle=\color{green!50!black}, % Comments in green
+    stringstyle=\color{black},         % Strings in red
+    showspaces=false,                % Don't show spaces
+    showtabs=false,                  % Don't show tabs
+    xleftmargin=20pt,                % Left margin
+    inputencoding=utf8,              % For UTF-8 compatibility
+    literate={Ö}{{\"O}}1 {Ä}{{\"A}}1 {Ü}{{\"U}}1 {ß}{{\ss}}1
+}
+
 %
 \usepackage[nameinlink]{cleveref}
 \usepackage[all]{hypcap}
