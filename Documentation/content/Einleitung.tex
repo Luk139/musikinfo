@@ -1,42 +1,100 @@
 \chapter{Einleitung}
 %
 
-Musik ist zu einem Teil des täglichen Labens vieler Menschen geworden. Durch den Konsum und den wirtschaftlichen Ertrag wird an der Produktion und Analyse von Musik geforscht (Quelle?).
+Musik ist zu einem Teil des täglichen Lebens vieler Menschen geworden \parencite{musiknutzung}. Durch den Konsum und den wirtschaftlichen Ertrag wird an der Produktion und Analyse von Musik geforscht \parencite{absatz}. Unter anderem gründete die Universität zu Lübeck ein eigenes Institut für Signalverarbeitung \parencite{institute_for_signal_processing}.
 
 \par
 
-Ein Teil der Forschung bezieht sich auf die Trennung einer Wellenform in die unterschiedlichen Funktionen der Frequenzen. Zuvor beinhaltet die Wellenform eine oder mehrere Sinus- und Kosinusfunktionen, die eine neue Funktion bilden. Dies wird sowohl auf audiovisuelle als auch auf visuelle Funktionen angewendet. Beispielsweise kann die Funktion mehrere Instrumente beinhalten, die anhand der Funktion nicht identifizierbar sind. Einer der Algorithmen zur Trennung von Signalen heißt Fourier Transform und wird in diesem Projekt behandelt.
+Ein Teil der Forschung bezieht sich auf die Trennung einer Wellenform in die einzelnen Funktionen der jeweiligen Frequenzen. Zuvor beinhaltet die Wellenform eine oder mehrere Sinus- und Kosinusfunktionen, die eine neue Funktion bilden. Dies gilt sowohl für audiovisuelle als auch für visuelle Funktionen. Beispielsweise kann die Funktion mehrere Instrumente beinhalten, die anhand der Funktion nicht identifizierbar sind. Einer der Algorithmen zur Trennung von Signalen heißt Fourier Transform und wird in diesem Projekt behandelt.
 
 \par
 
-Unter anderem werden Musikinstrumente in Liedern getrennt und einzeln angehört oder wiederverwendet. In diesem Projekt werden zum Einstieg lediglich perkussive aus akkustischen Instrumenten getrennt. Zwischen den jeweiligen Instrumentengruppen wird in \cref{sounds} unterschieden.
+Unter anderem werden Musikinstrumente in Liedern getrennt und einzeln angehört oder wiederverwendet. In diesem Projekt werden zum Einstieg lediglich perkussive aus akkustischen Instrumenten getrennt. Zwischen den jeweiligen Instrumentengruppen wird in \cref{instrument_groups} unterschieden.
 
 %
 \section{Relevanz}
 %
 
-Es gibt unterschiedliche Kontexte, in denen die Trennung von Audiosignalen zum Einsatz kommt. Häufig ist eine Eingabefunktion als Summe aller Signale schwierig zu analysieren oder weiterzuverarbeiten. Beispielsweise, wenn einzelne Instrumente im Nachhinein bearbeitet werden sollen.
+Es gibt unterschiedliche Kontexte, in denen die Trennung von Audiosignalen zum Einsatz kommt. Häufig ist eine Eingabefunktion als Summe aller Signale schwierig zu analysieren oder weiterzuverarbeiten. Beispielsweise, wenn gleichzeitige Töne einer Tonspur Noten zugeordnet werden, um Stimmen von Musik zu unterscheiden oder wenn einzelne Instrumente im Nachhinein bearbeitet und einzeln angehört werden \parencite{importance_fourier}.
 
 \par
 
-In Zeiten von zunehmend digital produzierter Musik und Verbreitung von Informatik stellt sich die Frage, wie Musiksignale digital aufgebaut sind und wie man mit ihnen arbeiten kann. Im Kontext dieser Arbeit wird die Fourier Transform verwendet, um eine Tondatei in Gruppen von harmonischen und perkussiven Musikinstrumenten zu zerlegen. Dies kann mit weiterer Modifikation verwendet werden, um bestimmte Instrumente zum üben zu trennen oder Hintergrundgeräusche auszublenden.
+Zudem ist die Audioverarbeitung lediglich ein Unterthema der Signalverarbeitung. Die Forschung an einem spezifischen Anwendungsfall kann ebenfalls Fortschritt in einem weiteren Themenbereich der Signalverarbeitung bringen. Beispielsweise wird die Fourier Transform ebenfalls bei Laser-Doppler-Vibrometern verwendet \parencite{Laser-Doppler-Vibrometer}.
 
 \par
+
+In Zeiten von zunehmend digital produzierter Musik und Verbreitung von Informatik stellt sich die Frage, wie Musiksignale digital aufgebaut sind und wie mit ihnen gearbeitet wird. Im Kontext dieser Arbeit wird die Fourier Transform verwendet, um eine Tondatei in Gruppen von harmonischen und perkussiven Musikinstrumenten zu zerlegen. Dies kann mit weiterer Modifikation verwendet werden, um bestimmte Instrumente zum üben (das Üben?) zu trennen oder Hintergrundgeräusche auszublenden.
 
 % Außerdem werden in dem Projekt die Überprüfung der Funktionalität einer Ampel oder das stimmen von Musikinstrumenten in Echtzeit behandelt. Dies sind nur Beispiele dafür, welche Anwendungsfälle es für die Fourier Transform gibt.
 
-(Etwas zu kurz?)
+%
+\section{Forschungsfrage und Hypothesen}
+%
+
+Dieses Projekt dient dem Einstieg in die Thematik der Signalverarbeitung. Dabei werden Audiosignale und deren Entstehung behandelt.
+Es wird überprüft, ob die Trennung von Percussive und Melodic (klein? auf Deutsch? Noch nicht einheitlich ) Frequenzen in einer Wav-Datei umsetzbar ist.
+
+\par
+
+\textbf{Bei der Bearbeitung ergeben sich weitere Fragen zu einzelnen Unterthemen:}
+
+%
+\begin{itemize}
+    \item Wie entstehen Frequenzen und wie kann man zwischen ihnen unterscheiden?
+    \item Was zeichnet die behandlelten Instrumentgruppen aus und warum wurden sie gewählt?
+    \item Welche Audio-Speicherformen bestehen und sind für das Projekt geeignet?
+    \item Existieren alternative Metodiken zur Fourier Transform? 
+\end{itemize}
+%
+
+\textbf{Zudem wird das Projekt mit den folgenden Annahmen bearbeitet, die während des Projekts widerlegt werden können:}
+
+%
+\begin{itemize}
+    \item Perkussive und Melodic Instrumente können aufgrund der unterschiedlichen Frequenzen im Rahmen dieses Projekts getrennt werden können.
+    \item Wav-Dateien sind besonders geeignet für die Trennung von Instrumenten aufgrund des geringen Informationsverlusts.
+    \item Das implementierte Programm wird aufgrund vorhandener Bibliotheken möglichst simpel gehalten und kann von Leser:innen nachvollzogen, übernommen und erweitert werden.
+\end{itemize}
+%
+
+%
+\section{Aufbau der Arbeit}
+%
+
+Um ein grundlegendes Verständnis für die Analyse von Dateiformaten zu entwickeln wird einem klaren Schema gefolgt. Mit diesem Schema wird sich an der chronologischen Reihenfolge von der Entstehung eines Tons bis zur Verarbeitung im Code orientiert.
+
+%
+\begin{enumerate}
+    \item Was ist ein Ton
+    \item Formen der Musikdarstellung
+    \item Vorstellung der Fourier Transform
+    \item Alternative Methode zur Fourier Transform
+    \item Trennung von Instrumenten im Code
+\end{enumerate}
+%
+
+Um einen Algorithmus zu implementieren, ist es hilfreich die unterschiedlichen Musikdarstellungen kennenzulernen. Diese werden im Anschluss an dem Aufbau eines Tons dargestellt. Für eine effektive Fourier Transform gibt es Voraussetzungen, die nur von wenigen Musikdarstellungen erfüllt werden.
+
+\par
+
+Anschließend werden unterschiedliche Methoden zur Transformation - inklusive der Fourier Transform - eines Signals behandelt, da es relevant ist ein Verständnis für die Transformationen zu entwickeln. Dies hilft nachzuvollziehen, warum die Fourier Transform geeignet ist und zukünftig den Einsatz neuer Transformations-Methoden abzuwägen.
+
+\par
+
+Abschließend wird ein Algorithmus beispielhaft implementiert, der die Trennung von perkussiven und melodischen Instrumenten mittels Fourier Transform durchführt. Anhand des Codes können Merkmale der Transformation einzeln und im Kontext des gesamten Prozesses wiedergegeben werden.
 
 %
 \section{Vorgehen}
 %
 
-Ohne jegliches Vorwissen, wie die Signale einer Musikdatei gespeichert und von einem Computer interpretiert oder getrennt werden, wird das Projekt durchgeführt. Die Erkenntnisse und notwendiges Hintergrundwissen werden dokumentiert und erklären die Logik und Zusammenhänge der Fourier Transform. Durch die Dokumentation wird anderen Leser:innen ein erstes Verständnis von WAV-Dateien vermittelt auf dem im Anschluss aufgebaut werden kann.
+Ohne jegliches Vorwissen, wie die Signale einer Musikdatei gespeichert und von einem Computer interpretiert oder getrennt werden, wird das Projekt durchgeführt. Die Erkenntnisse und notwendiges Hintergrundwissen werden dokumentiert und erklären die Logik und Zusammenhänge der Fourier Transform. 
 
 \par
 
-(WAV-Dateien sehr spezifisch: Den Leser:innen wird auch die Funktionalität der FFT und Code etc. vermittelt?)
+Durch die Dokumentation wird anderen Leser:innen ein erstes Verständnis von Signalverarbeitung vermittelt auf dem im Anschluss aufgebaut werden kann. Dabei werden unterschiedliche Dateiformate, Methoden zur Transformation von Signalen und die Trennung unterschiedlicher Signale behandelt (siehe: \cref{theorie}).
 
 \par
 
 Das Projekt dokumentiert anschließend die Implementierung eines Algorithmus zur Trennung der harmonischen und perkussiven Tongruppen einer WAV-Datei mittels Fourier Transform, sowie das schreiben auf zwei getrennte WAV-Dateien mittels Inverse Fourier Transform (siehe: \cref{Code}). Dabei wird zuvor behandelte Logik und Hintergrundwissen referenziert und in der Praxis erklärt.
+
+(Hier Begriffsklärung und unserer Interpretatin von Begriffen? Beispiel Wellenform. Oder unnötig?)
