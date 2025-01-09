@@ -36,6 +36,7 @@
 %
 %=== wichtig, dass folgende Pakete NACH hyperref geladen werden ===============
 \usepackage{scrhack}% Um Warnung bzgl. \float@addtolists im listings-Paket (s.u.) zu vermeiden
+\usepackage{MnSymbol}
 \usepackage{listings}
 \usepackage{listings}
 \usepackage{listingsutf8} % For UTF-8 support in code listings
@@ -57,6 +58,10 @@
     literate={Ö}{{\"O}}1 {Ä}{{\"A}}1 {Ü}{{\"U}}1 {ß}{{\ss}}1
 }
 
+\lstset{breaklines=true, breakatwhitespace=true,
+        % prebreak=\mbox{\tiny$\searrow$},
+        postbreak=\raisebox{0ex}[0ex][0ex]
+        {\ensuremath{\rcurvearrowse\space}}}
 %
 \usepackage[nameinlink]{cleveref}
 \usepackage[all]{hypcap}
