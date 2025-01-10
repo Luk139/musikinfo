@@ -2,8 +2,6 @@
 \label{theorie}
 %
 
-(perkussive erst hohe Frequenz...? in jeweiligem  Kapitel erklären)
-
 Vor dem Einstieg in die Signalverarbeitung wird Hintergrundwissen benötigt. Für die Durchführung der Fourier Transform werden gleichzeitig aufgenommen Signale wieder in die ursprünglichen Signale getrennt. Die Komplexität erschließt sich durch die Darstellung vermischter Signale und dessen Schwierigkeit einzelne Signale wiederzufinden. Dafür werden zuvor der Aufbau einzelner Signalen behandelt, um zu erkennen wie Frequenzen dargestellt und abgelesen werden. 
 
 %
@@ -35,7 +33,10 @@ Diese Vibration kann durch unterschiedliche Gegenstände erzeugt werden. Dazu z�
 
 \par
 
-Bei der Darstellung mehrerer Signale werden einzelne Signale zu einer gemeinsamen Wellenform addiert. In \cref{wav_multiple_sounds} werden eine 5hz (rot) und eine 2,5hz (blau) Wellenform gleichzeitig aufgenommen. Der Summe der beiden Signale (grün) sind die einzelnen Bestandteile kaumabzulesen. Die Herausforderung Frequenzen der Bestandteile zu identifizieren wird mittels Transformationen bewältigt.
+Bei der Darstellung mehrerer Signale werden einzelne Signale zu einer gemeinsamen Wellenform addiert.
+In \cref{wav_multiple_sounds} werden eine 5hz (rot) und eine 2,5hz (blau) Wellenform gleichzeitig aufgenommen.
+Der Summe der beiden Signale (grün) sind die einzelnen Bestandteile kaum abzulesen.
+Die Herausforderung Frequenzen der Bestandteile zu identifizieren wird mittels Transformationen bewältigt.
 
 %
 \begin{figure}[h]
@@ -58,15 +59,24 @@ Bei der Darstellung mehrerer Signale werden einzelne Signale zu einer gemeinsame
 \label{instrument_groups}
 %
 
-Musikinstrumente können in mehrere Gruppen aufgeteilt werden. Diese unterscheiden sich voneinander in der Entstehung und dem Klang der Töne. ähneln untereinander. In diesem Projekt werden akkustische Instrumente behandelt, die in harmonische und perkussive Instrumente aufgeteilt werden. Darüberhinaus existieren noch elektrische und digitale Instrumente. Sie benötigen entweder Elektrizität oder einen Computerprozessor, um wie vorgesehen zu funktionieren. Allerdings werden sie in diesem Projekt nicht behandelt.
+Musikinstrumente können in mehrere Gruppen aufgeteilt werden.
+Diese unterscheiden sich voneinander in der Entstehung und dem Klang der Töne.
+In diesem Projekt werden akkustische Instrumente behandelt, die in harmonische und perkussive Instrumente aufgeteilt werden.
+Darüberhinaus existieren noch elektrische und digitale Instrumente.
+Sie benötigen entweder Elektrizität oder einen Computerprozessor, um wie vorgesehen zu funktionieren.
+Allerdings werden sie in diesem Projekt nicht behandelt.
 
 \subsection{Behandelte Instrumentgruppen}
 
-Akkustische Instrumente erzeugen einen Ton indem Menschen Kraft auf sie ausüben. Sie benötigen keinen Strom, keine Verstärkung und keinen Computerprozessor, um einen Ton zu erzeugen und sind die ältesten Instrumente. Sie können in perkussive und harmonische Instrumente unterteilt werden. 
+\textbf{Akkustische Instrumente} erzeugen einen Ton indem Menschen Kraft auf sie ausüben.
+Sie benötigen keinen Strom, keine Verstärkung und keinen Computerprozessor, um einen Ton zu erzeugen und sind die ältesten Instrumente.
+Sie können in perkussive und harmonische Instrumente unterteilt werden. 
 
 \par
 
-Perkussive Instrumente werden geschlagen, geschüttelt oder geschabt und sind eine spezielle Form der akkustischen Instrumente. Die übrigen akkustischen Instrumente sind harmonisch \parencite{acoustic_electric_digital_instruments}. In diesem Projekt wird versucht perkussive und harmonische Instrumente zu trennen.
+\textbf{Perkussive Instrumente} werden geschlagen, geschüttelt oder geschabt und sind eine spezielle Form der akkustischen Instrumente.
+Die übrigen akkustischen Instrumente sind \textbf{harmonisch} \parencite{acoustic_electric_digital_instruments}.
+In diesem Projekt wird versucht perkussive und harmonische Instrumente zu trennen.
 
 %
 \subsection{Vorteile der Instrumentgruppen für die Signalverarbeitung}
@@ -88,7 +98,9 @@ Musik kann unterschiedlich dargestellt werden und es wird je nach Bedarf eine an
 \subsection{Musiknoten und symbolische Darstellung}
 %
 
-Musiknoten sind eine formale Sprache, die vorgibt wie ein Musikstück gespielt wird \parencite{sheet_music_representations}. Bei symbolischen Darstellungen werden eindeutige Entitäten definiert, die von einem Computer übersetzt werden. Beispielsweise wird der Musical Instrument Digital Interface (kurz: MIDI) Standard verwendet, um Informationen eines gespielten Tons möglichgst detailliert zu speichern und abzurufen.
+Musiknoten sind eine formale Sprache, die vorgibt wie ein Musikstück gespielt wird \parencite{sheet_music_representations}.
+Bei symbolischen Darstellungen werden eindeutige Entitäten definiert, die von einem Computer übersetzt werden.
+Beispielsweise wird der Musical Instrument Digital Interface (kurz: MIDI) Standard verwendet, um Informationen eines gespielten Tons möglichst detailliert zu speichern und abzurufen.
 
 \subsection{Audiodarstellung}
 
@@ -125,13 +137,18 @@ Die Komprimierung von Audiodateien wird meistens verwendet, um mehr Musik auf ei
 \textbf{Samplingrate}
 %
 
-Die Samplingrate definiert die Anzahl von gespeicherten Signalen pro Sekunde. Dies reduziert die benötigten gespeicherten Daten einer durchgängigen Aufnahme auf mehrere Blöcke (siehe: \cref{fig:samplingrate}). Beispielsweise werden auf einer CD 44.100 Werte pro Sekunde gespeichert (kurz: 44.1 kHz), dessen Übergänge kaum wahrnehmbar sind, jedoch bereits zu einem deutlichen Reduzierung des Speicherbedarfs führen.
+Die Samplingrate definiert die Anzahl von gespeicherten Signalen pro Sekunde.
+Dies reduziert die benötigten gespeicherten Daten einer durchgängigen Aufnahme auf mehrere Blöcke (siehe: \cref{fig:samplingrate}).
+Beispielsweise werden auf einer CD 44.100 Werte pro Sekunde gespeichert (kurz: 44.1 kHz), dessen Übergänge kaum wahrnehmbar sind, jedoch bereits zu einer deutlichen Reduzierung des Speicherbedarfs führen.
 
 %
 \textbf{Quantisierungsschrittweite}
 %
 
-Die Quantisierungsschrittweite beschreibt die Auflösung, mit der jedes Sample komprimiert wird. Die möglichen Werte eines Samples sind kontinuierlich und könnten theoretisch unendlich viele Dezimalstellen haben. Durch die Quantisierungsschrittweite werden diese Werte jedoch auf eine festgelegte Anzahl möglicher diskreter Werte reduziert, wodurch der Unterschied zwischen den Werten bestimmt wird. Bei CDs wird beispielsweise eine 16-Bit-Codierung gewählt, die 65.536 mögliche Werte definiert.
+Die Quantisierungsschrittweite beschreibt die Auflösung, mit der jedes Sample komprimiert wird.
+Die möglichen Werte eines Samples sind kontinuierlich und könnten theoretisch unendlich viele Dezimalstellen haben.
+Durch die Quantisierungsschrittweite werden diese Werte auf eine festgelegte Anzahl möglicher diskreter Werte reduziert, wodurch der Unterschied zwischen den Werten bestimmt wird.
+Bei CDs wird beispielsweise eine 16-Bit-Codierung gewählt, die 65.536 mögliche Werte definiert.
 
 %
 \subsection{Waveform Audio File Format}
@@ -164,7 +181,7 @@ Außer Wav-Dateien gibt es noch einige weitere verbreitete Speicherformate für 
 \section{Trennung einer Tonspur in verschiedene Instrumente}
 %
 
-Eine Aufnahme speichert das eingehende Signal in Abhängigkeit zur Zeit. Dabei weist jedes Signal charakteristische Schwingungen in Form einer Wellenform auf. Während einer Aufnahme überlagern sich mehrere Signale zu einer gemeinsamen Wellenform, was ihre Unterscheidung erschwert (siehe: \cref{wav_multiple_sounds}). Dies tritt insbesondere bei Hintergrundgeräuschen oder bei der gleichzeitigen Aufnahme mehrerer Musikinstrumente auf.
+Eine Aufnahme speichert das eingehende Signal in Abhängigkeit zur Zeit. Dabei weist jedes Signal charakteristische Schwingungen in Form einer Wellenform auf. Während einer Aufnahme überlagern sich mehrere Signale zu einer gemeinsamen Wellenform, was ihre Unterscheidung erschwert (siehe: \cref{wav_multiple_sounds}). Dies tritt insbesondere bei Hintergrundgeräuschen oder bei der parallelen Aufnahme mehrerer Musikinstrumente auf.
 
 \par
 
@@ -172,7 +189,7 @@ Die Trennung von Signalen ist ein Thema, das in Forschung und Bildung intensiv b
 
 \par
 
-Neben der Fourier Transform werden auch andere Ansätze wie die Wavelet Transform, die Short-Time Fourier Transform (kurz: STFT), sowie statistische Verfahren wie die Blind Source Separation (BSS) und die Independent Component Analysis (ICA) eingesetzt. Darüber hinaus finden moderne Verfahren des maschinellen Lernens, insbesondere neuronale Netzwerke, zunehmend Anwendung in der Trennung von Audiosignalen.
+Neben der Fourier Transform werden weitere Ansätze wie die Wavelet Transform, die Short-Time Fourier Transform (kurz: STFT), sowie statistische Verfahren wie die Blind Source Separation (BSS) und die Independent Component Analysis (ICA) eingesetzt. Darüber hinaus finden moderne Verfahren des maschinellen Lernens, insbesondere neuronale Netzwerke, zunehmend Anwendung in der Trennung von Audiosignalen.
 
 %
 \subsection{Fourier Transform}
@@ -190,7 +207,7 @@ Die Fourier Transform ist eine Verallgemeinerung der Fourierreihen. Diese Reihen
 
 \par
 
-Erst im 20. Jahrhundert wurden Fourierreihen auch für andere stetige oder stückweise stetige Funktionen formal bewiesen. Dank der Vollständigkeiten der Funktionenreihe lässt sich die Fourier Transform auf eine Vielzahl von Funktionen anwenden, einschließlich periodischer und nicht-periodischer Funktionen, und erhielt ihren Namen zu Ehren von Joseph Fourier.
+Erst im 20. Jahrhundert wurden Fourierreihen auch für andere stetige oder stückweise stetige Funktionen formal bewiesen. Dank der Vollständigkeit der Funktionenreihe lässt sich die Fourier Transform auf eine Vielzahl von Funktionen anwenden, einschließlich periodischer und nicht-periodischer Funktionen, und erhielt ihren Namen zu Ehren von Joseph Fourier.
 
 %
 \subsubsection{Durchführung der Transformation}
@@ -200,7 +217,7 @@ Die Fourier Transform ist ein mathematisches Verfahren, bei dem ein Signal aus d
 
 \par
 
-In der neuen Darstellung werden die Frequenzen der Funktion unabhängig von der zeitlichen Komponente wiedergegeben. Unterschiedliche Frequenzen können unterschiedlichen Signalen zugeordnet werden. Die frequentielle Darstellung gibt an welche Signale in welchen Frequenzen Teil der Funktion sind, allerdings nicht wann. Daher wird die Darstellung wieder umgeformt in die zeitliche Abhängigkeit.
+In der neuen Darstellung werden die Frequenzen der Funktion unabhängig von der zeitlichen Komponente wiedergegeben. Unterschiedliche Frequenzen können unterschiedlichen Signalen zugeordnet werden. Die frequentielle Darstellung gibt an welche Signale in welchen Frequenzen Teil der Funktion sind, allerdings nicht wann. Daher wird die Darstellung wieder zurückgeformt in die zeitliche Abhängigkeit.
 
 \par
 
