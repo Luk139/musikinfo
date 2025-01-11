@@ -126,14 +126,6 @@ Für die Aufnahme von Audiosignalen werden analoge Signale in eine digitale Form
 Die Komprimierung von Audiodateien wird meistens verwendet, um mehr Musik auf einem Datenträger speichern zu können \parencite{what_is_audio_compression}. Für die Komprimierung einer Aufnahme wird diese in eine Samplingrate (auch: Abtastrate) und eine Quantisierungsschrittweite reduziert.
 
 %
-\begin{figure}[h]
-    \includegraphics[width=1\textwidth]{images/Samplingrate_Quantisierungsgröße.PNG}
-    \caption{Unterteilung in Samplingrate (oben) und Quantisierungsschrittweite\\\hspace{\textwidth}\textit{Quelle}: \cite{fundamentals_of_music_processing}, S. 61}
-    \label{fig:samplingrate}
-\end{figure}
-%
-
-%
 \textbf{Samplingrate}
 %
 
@@ -149,6 +141,14 @@ Die Quantisierungsschrittweite beschreibt die Auflösung, mit der jedes Sample k
 Die möglichen Werte eines Samples sind kontinuierlich und könnten theoretisch unendlich viele Dezimalstellen haben.
 Durch die Quantisierungsschrittweite werden diese Werte auf eine festgelegte Anzahl möglicher diskreter Werte reduziert, wodurch der Unterschied zwischen den Werten bestimmt wird.
 Bei CDs wird beispielsweise eine 16-Bit-Codierung gewählt, die 65.536 mögliche Werte definiert.
+
+%
+\begin{figure}[h]
+    \includegraphics[width=1\textwidth]{images/Samplingrate_Quantisierungsgröße.PNG}
+    \caption[Unterteilung in Samplingrate und Quantisierungsschrittweite]{Unterteilung in Samplingrate (oben) und Quantisierungsschrittweite\\\hspace{\textwidth}\textit{Quelle}: \cite{fundamentals_of_music_processing}, S. 61}
+    \label{fig:samplingrate}
+\end{figure}
+%
 
 %
 \subsection{Waveform Audio File Format}
@@ -245,7 +245,7 @@ Das Signal oder die Signale, die von der Tonspur getrennt werden, können in der
 %
 \begin{figure}[h]
     \includegraphics[width=1\textwidth]{time_to_frequency_domain.png}
-    \caption{Transformation von zeitlicher zu frequenzieller Darstellung\\\hspace{\textwidth}\textit{Quelle}: \cite{music_extraction}}
+    \caption[Transformation von zeitlicher zu frequenzieller Darstellung]{Transformation von zeitlicher zu frequenzieller Darstellung\\\hspace{\textwidth}\textit{Quelle}: \cite{music_extraction}}
     \label{fig:frequency_to_time}
 \end{figure}
 %
@@ -263,7 +263,7 @@ Die Aufnahme des Tons ist in \cref{fig:fourier}(a) zu erkennen. Für die Transfo
 %
 \begin{figure}[h]
     \includegraphics[width=1\textwidth]{images/Fourier_math.PNG}
-    \caption{Note C4 in unterschiedlichen Darstellungen\\\hspace{\textwidth}\textit{Quelle}: \cite{fundamentals_of_music_processing}, S. 41}
+    \caption[Note C4 in unterschiedlichen Darstellungen]{Note C4 in unterschiedlichen Darstellungen\\\hspace{\textwidth}\textit{Quelle}: \cite{fundamentals_of_music_processing}, S. 41}
     \label{fig:fourier}
 \end{figure}
 % Music Processing S.41
@@ -297,12 +297,13 @@ Außerdem wird bei der Fourier Transform die ganze Datei bearbeitet. Dies führt
 \label{wavelet-transformation}
 %
 
-Die Wavelet Transform ist ein Verfahren, das eine zeitliche Darstellung einer Funktion in eine dreidimensionale Darstellung in Abhhängigkeit von Zeit und Frequenz überführt. Dabei werden sogenannte Wavelets - spezielle Wellenfunktionen - mit der ursprünglichen Funktion verglichen, um Übereinstimmungen zu finden. Der Begriff \enquote{Wavelet} stammt aus dem Französischen und bedeutet \enquote{kleine Welle} oder \enquote{Wellchen}.
+Die Wavelet Transform ist ein Verfahren, das eine zeitliche Darstellung einer Funktion in eine dreidimensionale Darstellung in Abhhängigkeit von Zeit und Frequenz überführt. Dabei werden sogenannte Wavelets - spezielle Wellenfunktionen - mit der ursprünglichen Funktion verglichen, um Übereinstimmungen zu finden (siehe: \cref{wavelet_examples}). Der Begriff \enquote{Wavelet} stammt aus dem Französischen und bedeutet \enquote{kleine Welle} oder \enquote{Wellchen}.
 
 %
 \begin{figure}[h]
-    \includegraphics[width=1\textwidth]{wavelets.png}
-    \caption{Wavelet Beispiele in zweidimensionaler Darstellung\\\hspace{\textwidth}\textit{Quelle}: \cite{wavelet_examples}}
+    \centering
+    \includegraphics[width=0.7\textwidth]{wavelets.png}
+    \caption[Wavelet Beispiele in zweidimensionaler Darstellung]{Wavelet Beispiele in zweidimensionaler Darstellung\\\hspace{\textwidth}\textit{Quelle}: \cite{wavelet_examples}}
     \label{fig:wavelet_examples}
 \end{figure}
 %
@@ -318,12 +319,12 @@ Im Gegensatz zur ursprünglichen Funktion haben die Wavelets eine endliche Fläc
 \end{itemize}
 %
 
-Zudem besitzt das Wavelet einen realen und einen imaginären Teil. Durch die Berücksichtigung des imaginären Teils entsteht eine dreidimensionale Darstellung des Signals. Bei der Wavelet Transform wird sowohl der reale als auch der imaginäre Teil des Wavelets mit der Funktion korreliert (Mathematik: Korrelation), um die Ähnlichkeit der Funktion und des Wavelets zu berechnen. Diese Ähnlichkeit wird für jedes m und b ermittelt und in einem dreidimensionalen Ausgabe-Graphen in Abhängigkeit von der Zeit und der Frequenz dargestellt (siehe: \cite{wavelet_transform}).
+Zudem besitzt das Wavelet einen realen und einen imaginären Teil. Durch die Berücksichtigung des imaginären Teils entsteht eine dreidimensionale Darstellung des Signals (siehe: \cref{fig:wavelet_transform}). Bei der Wavelet Transform wird sowohl der reale als auch der imaginäre Teil des Wavelets mit der Funktion korreliert (Mathematik: Korrelation), um die Ähnlichkeit der Funktion und des Wavelets zu berechnen. Diese Ähnlichkeit wird für jedes m und b ermittelt und in einem dreidimensionalen Ausgabe-Graphen in Abhängigkeit von der Zeit und der Frequenz dargestellt (siehe: \cite{wavelet_transform}).
 
 %
 \begin{figure}[h]
     \includegraphics[width=1\textwidth,trim={0 0 0 2cm},clip]{wavelet_transform.png}
-    \caption{Frequentielle und zeitliche Darstellung nach Wavelet Transform\\\hspace{\textwidth}\textit{Quelle}: \cite{wavelet_transform}}
+    \caption[Frequentielle und zeitliche Darstellung nach Wavelet Transform]{Frequentielle und zeitliche Darstellung nach Wavelet Transform\\\hspace{\textwidth}\textit{Quelle}: \cite{wavelet_transform}}
     \label{fig:wavelet_transform}
 \end{figure}
 %
