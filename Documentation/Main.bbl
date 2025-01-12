@@ -72,7 +72,7 @@
       \field{labeldatesource}{nodate}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{note}{Abgerufen am 31.08.2024}
+      \field{note}{Abgerufen am 12.01.2025}
       \field{title}{{What Is Audio Compression (And Why Should You Care)?}}
       \verb{urlraw}
       \verb https://audioengine.com/explore/what-is-audio-compression-and-why-should-you-care/
@@ -100,7 +100,7 @@
       \field{labeldatesource}{nodate}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{note}{Abgerufen am 19.08.2024}
+      \field{note}{Abgerufen am 12.01.2025}
       \field{title}{{Signaltöne}}
       \verb{urlraw}
       \verb https://www.auersignal.com/de/technische-informationen/akustische-signalgerate/signaltone/
@@ -130,7 +130,7 @@
       \field{labeldatesource}{nodate}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{note}{Abgerufen am 19.08.2024}
+      \field{note}{Abgerufen am 12.01.2025}
       \field{title}{{Absatz}}
       \verb{urlraw}
       \verb https://www.musikindustrie.de/wie-musik-zur-karriere-werden-kann/musikindustrie-in-zahlen/absatz-2021
@@ -160,7 +160,7 @@
       \field{labeldatesource}{nodate}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{note}{Abgerufen am 19.08.2024}
+      \field{note}{Abgerufen am 12.01.2025}
       \field{title}{{Musiknutzung}}
       \verb{urlraw}
       \verb https://www.musikindustrie.de/wie-musik-zur-karriere-werden-kann/musikindustrie-in-zahlen/musiknutzung-2021
@@ -250,7 +250,7 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{month}{1}
-      \field{note}{Abgerufen am 19.08.2024}
+      \field{note}{Abgerufen am 12.01.2025}
       \field{title}{{Why Fourier Transform is so important?}}
       \field{year}{2021}
       \verb{urlraw}
@@ -279,7 +279,7 @@
       \field{labeldatesource}{nodate}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{note}{Abgerufen am 31.08.2024}
+      \field{note}{Abgerufen am 12.01.2025}
       \field{title}{{WAV}}
       \verb{urlraw}
       \verb https://www.e-teaching.org/materialien/glossar/wav
@@ -307,13 +307,13 @@
       \field{labeldatesource}{nodate}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{note}{Abgerufen am 31.08.2024}
+      \field{note}{Abgerufen am 12.01.2025}
       \field{title}{{Digital Representation}}
       \verb{urlraw}
-      \verb https://pages.uoregon.edu/emi/8.php#:~:text=A%20digital%20representation%20of%20sound%20is%20a%20series%20of%20discrete,spaced%20measurements%20is%20a%20sample%20.
+      \verb https://pages.uoregon.edu/emi/8.php
       \endverb
       \verb{url}
-      \verb https://pages.uoregon.edu/emi/8.php#:~:text=A%20digital%20representation%20of%20sound%20is%20a%20series%20of%20discrete,spaced%20measurements%20is%20a%20sample%20.
+      \verb https://pages.uoregon.edu/emi/8.php
       \endverb
     \endentry
     \entry{acoustic_electric_digital_instruments}{online}{}{}
@@ -337,7 +337,7 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{month}{8}
-      \field{note}{Abgerufen am 19.08.2024}
+      \field{note}{Abgerufen am 12.01.2025}
       \field{title}{{The Difference Between Acoustic, Electric and Digital Instruments}}
       \field{year}{2020}
       \verb{urlraw}
@@ -472,7 +472,7 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{month}{10}
-      \field{note}{Abgerufen am 31.08.2024}
+      \field{note}{Abgerufen am 12.01.2025}
       \field{title}{{Manipulate Audio File in Python With 6 Powerful Tips}}
       \field{year}{2021}
       \true{nocite}
@@ -504,7 +504,7 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{month}{8}
-      \field{note}{Abgerufen am 19.08.2024}
+      \field{note}{Abgerufen am 12.01.2025}
       \field{title}{{Wavelets: a mathematical microscope}}
       \field{year}{2022}
       \verb{urlraw}
@@ -533,7 +533,7 @@
       \field{labeldatesource}{nodate}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{note}{Abgerufen am 31.08.2024}
+      \field{note}{Abgerufen am 12.01.2025}
       \field{title}{{Audioformate im Überblick}}
       \verb{urlraw}
       \verb https://lehrerfortbildung-bw.de/st_digital/medienwerkstatt/multimedia/audio/formate/
@@ -547,7 +547,7 @@
       \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
       \field{labeldatesource}{nodate}
       \field{labeltitlesource}{title}
-      \field{note}{Abgerufen am 31.08.2024}
+      \field{note}{Abgerufen am 12.01.2025}
       \field{title}{{Librosa}}
       \true{nocite}
       \verb{urlraw}
@@ -576,7 +576,7 @@
       \field{labeldatesource}{nodate}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{note}{Abgerufen am 19.08.2024}
+      \field{note}{Abgerufen am 12.01.2025}
       \field{title}{{Time-Frequency Analysis Using Continuous Wavelet Transform Example\_08}}
       \verb{urlraw}
       \verb https://www.mathworks.com/help/examples/wavelet/win64/TimeFrequencyAnalysisUsingContinuousWaveletTransformExample_08.png
@@ -685,7 +685,7 @@
       \field{labeldatesource}{nodate}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{note}{Abgerufen am 19.08.2024}
+      \field{note}{Abgerufen am 12.01.2025}
       \field{title}{{Sheet Music Representations}}
       \verb{urlraw}
       \verb https://www.audiolabs-erlangen.de/resources/MIR/FMP/C1/C1S1_SheetMusic.html
@@ -713,7 +713,7 @@
       \field{labeldatesource}{nodate}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{note}{Abgerufen am 19.08.2024}
+      \field{note}{Abgerufen am 12.01.2025}
       \field{title}{{Audioformate im Vergleich}}
       \verb{urlraw}
       \verb https://www.nrwision.de/mitmachen/wissen/audioformate-vergleich
@@ -741,7 +741,7 @@
       \field{labeldatesource}{nodate}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{note}{Abgerufen am 31.08.2024}
+      \field{note}{Abgerufen am 12.01.2025}
       \field{title}{{Fast Fourier Transformation FFT - Grundlagen}}
       \verb{urlraw}
       \verb https://www.nti-audio.com/de/service/wissen/fast-fourier-transformation-fft
@@ -769,7 +769,7 @@
       \field{labeldatesource}{nodate}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{note}{Abgerufen am 19.08.2024}
+      \field{note}{Abgerufen am 12.01.2025}
       \field{title}{{Signalverarbeitung: Grundlagen, Techniken und Anwendungen}}
       \verb{urlraw}
       \verb https://www.optomet.com/de/wissen-technologie/signalverarbeitung/
@@ -855,7 +855,7 @@
       \field{labeldatesource}{nodate}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{note}{Abgerufen am 19.08.2024}
+      \field{note}{Abgerufen am 12.01.2025}
       \field{title}{{Examples of different types of wavelets}}
       \verb{urlraw}
       \verb https://www.researchgate.net/publication/328086476/figure/fig1/AS:678195321921536@1538705773009/Examples-of-different-types-of-wavelets.ppm
@@ -883,7 +883,7 @@
       \field{labeldatesource}{nodate}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{note}{Abgerufen am 31.08.2024}
+      \field{note}{Abgerufen am 12.01.2025}
       \field{title}{{What is a WAV file?}}
       \verb{urlraw}
       \verb https://www.roxio.com/en/file-formats/wav-file/
@@ -913,7 +913,7 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{month}{8}
-      \field{note}{Abgerufen am 19.08.2024}
+      \field{note}{Abgerufen am 12.01.2025}
       \field{title}{{Why is the Fourier transform so important?}}
       \field{year}{2011}
       \verb{urlraw}
@@ -942,7 +942,7 @@
       \field{labeldatesource}{nodate}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{note}{Abgerufen am 19.08.2024}
+      \field{note}{Abgerufen am 12.01.2025}
       \field{title}{{Research Activities}}
       \verb{urlraw}
       \verb https://www.isip.uni-luebeck.de/research
@@ -972,7 +972,7 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{month}{10}
-      \field{note}{Abgerufen am 31.08.2024}
+      \field{note}{Abgerufen am 12.01.2025}
       \field{title}{{Music Extraction}}
       \field{year}{2021}
       \verb{urlraw}
